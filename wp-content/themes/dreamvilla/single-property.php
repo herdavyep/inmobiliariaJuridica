@@ -56,9 +56,9 @@ if ( have_posts() ):
 								<?php 
 								$property_status = get_post_meta( $post->ID, 'pstatus', true );
 								if ( $property_status == "sale" ){
-									printf( esc_html__('On Sale','dreamvilla-multiple-property'));
+									printf( esc_html__('Venta','dreamvilla-multiple-property'));
 								} else {
-									printf( esc_html__('On Rent','dreamvilla-multiple-property'));
+									printf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 								} ?>								
 							</label>
 							<?php $property_status_list = wp_get_post_terms($post->ID, 'property_status' );
@@ -805,9 +805,9 @@ if ( have_posts() ):
 														<label><?php 
 														$property_status = get_post_meta( $value->ID, 'pstatus', true );
 														if ( $property_status == "sale" ){
-															printf( esc_html__('On Sale','dreamvilla-multiple-property'));
+															printf( esc_html__('Venta','dreamvilla-multiple-property'));
 														} else {
-															printf( esc_html__('On Rent','dreamvilla-multiple-property'));
+															printf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 														} ?>
 														</label>
 													</div>
@@ -972,9 +972,9 @@ if ( have_posts() ):
 													<?php 
 													$property_status = get_post_meta( $property->ID, 'pstatus', true );
 													if ( $property_status == "sale" ){
-														printf( esc_html__('On Sale','dreamvilla-multiple-property'));
+														printf( esc_html__('Venta','dreamvilla-multiple-property'));
 													} else {
-														printf( esc_html__('On Rent','dreamvilla-multiple-property'));
+														printf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 													} ?>
 												</label>
 											</div>
@@ -1099,9 +1099,9 @@ if ( have_posts() ):
 													<?php 
 													$property_status = get_post_meta( $post->ID, 'pstatus', true );
 													if ( $property_status == "sale" ){
-														printf( esc_html__('On Sale','dreamvilla-multiple-property'));
+														printf( esc_html__('Venta','dreamvilla-multiple-property'));
 													} else {
-														printf( esc_html__('On Rent','dreamvilla-multiple-property'));
+														printf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 													} ?>								
 												</label>	<?php	
 
@@ -1841,9 +1841,9 @@ if ( have_posts() ):
 														<label><?php 
 														$property_status = get_post_meta( $value->ID, 'pstatus', true );
 														if ( $property_status == "sale" ){
-															printf( esc_html__('On Sale','dreamvilla-multiple-property'));
+															printf( esc_html__('Venta','dreamvilla-multiple-property'));
 														} else {
-															printf( esc_html__('On Rent','dreamvilla-multiple-property'));
+															printf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 														} ?>
 														</label>
 													</div>
@@ -2006,9 +2006,9 @@ if ( have_posts() ):
 													<?php 
 													$property_status = get_post_meta( $property->ID, 'pstatus', true );
 													if ( $property_status == "sale" ){
-														printf( esc_html__('On Sale','dreamvilla-multiple-property') );
+														printf( esc_html__('Venta','dreamvilla-multiple-property') );
 													} else {
-														printf( esc_html__('On Rent','dreamvilla-multiple-property') );
+														printf( esc_html__('Alquiler','dreamvilla-multiple-property') );
 													} ?>
 												</label>
 											</div>

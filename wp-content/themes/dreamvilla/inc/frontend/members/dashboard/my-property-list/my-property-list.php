@@ -55,9 +55,9 @@ if( isset($Current_User_Detail['pagentproperty'][0]) ){
                                             <label class="property-list-list-label"><?php 
                                             $property_status = get_post_meta( $value->ID, 'pstatus', true );
                                             if ( $property_status == "sale" ){
-                                                printf( esc_html__('On Sale','dreamvilla-multiple-property') );
+                                                printf( esc_html__('Venta','dreamvilla-multiple-property') );
                                             } else {
-                                                printf( esc_html__('On Rent','dreamvilla-multiple-property') );
+                                                printf( esc_html__('Alquiler','dreamvilla-multiple-property') );
                                             } ?>
                                             </label>                                
                                         </div>

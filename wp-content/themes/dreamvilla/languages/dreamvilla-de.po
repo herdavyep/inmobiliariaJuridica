@@ -1142,11 +1142,11 @@ msgid "Price"
 msgstr ""
 
 # wpml-name: 99a4325c4062fb2be9fc8b9e172ac283
-msgid "For Rent"
+msgid "Alquiler"
 msgstr ""
 
 # wpml-name: 7701915727a18008dfce2ae005351ccb
-msgid "For Sale"
+msgid "Venta"
 msgstr ""
 
 # wpml-name: ac8354d2ac6d9b627a8a172286f81574

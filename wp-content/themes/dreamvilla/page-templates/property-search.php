@@ -125,8 +125,8 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 										    <select name="status" id="status" class="selectpicker" data-width="100%">
 												<option value="" selected><?php esc_html_e('All Status','dreamvilla-multiple-property'); ?></option>
-												<option value="sale" <?php if( isset($_POST['status']) && $_POST['status'] == "sale" ){ echo "selected=selected"; } ?> ><?php esc_html_e('For Sale','dreamvilla-multiple-property'); ?></option>
-												<option value="rent" <?php if( isset($_POST['status']) && $_POST['status'] == "rent" ){ echo "selected=selected"; } ?> ><?php esc_html_e('For Rent','dreamvilla-multiple-property'); ?></option>
+												<option value="sale" <?php if( isset($_POST['status']) && $_POST['status'] == "sale" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Venta','dreamvilla-multiple-property'); ?></option>
+												<option value="rent" <?php if( isset($_POST['status']) && $_POST['status'] == "rent" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Alquiler','dreamvilla-multiple-property'); ?></option>
 											</select>
 										</div><?php
 										$status_status = false;

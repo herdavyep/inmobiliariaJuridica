@@ -325,8 +325,8 @@ class Dreamvilla_MP_PropertyFilter extends WP_Widget {
 	                                        <div class="col-xs-12 col-sm-12 col-md-12">
 											    <select name="status" class="selectpicker" data-width="100%">
 													<option value="" selected><?php esc_html_e('All Status','dreamvilla-multiple-property'); ?></option>
-													<option value="sale" ><?php esc_html_e('For Sale','dreamvilla-multiple-property'); ?></option>
-													<option value="rent" ><?php esc_html_e('For Rent','dreamvilla-multiple-property'); ?></option>
+													<option value="sale" ><?php esc_html_e('Venta','dreamvilla-multiple-property'); ?></option>
+													<option value="rent" ><?php esc_html_e('Alquiler','dreamvilla-multiple-property'); ?></option>
 												</select>
 											</div><?php											
 	                                    break;
@@ -480,9 +480,9 @@ class Dreamvilla_MP_FeaturedProperty extends WP_Widget {
 										<?php 
 										$property_status = get_post_meta( $post->ID, 'pstatus', true );
 										if ( $property_status == "sale" ){
-											printf( esc_html__('On Sale','dreamvilla-multiple-property'));
+											printf( esc_html__('Venta','dreamvilla-multiple-property'));
 										} else {
-											printf( esc_html__('On Rent','dreamvilla-multiple-property'));
+											printf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 										} ?>
 									</label>
 								</div>
@@ -756,9 +756,9 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 	$property_status = get_post_meta( $property_ID, 'pstatus', true );
 	
 	if ( $property_status == "sale" ){
-		$property_status = sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 	} else {
-		$property_status = sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 	}
 
 	$property_image = dreamvilla_mp_get_device_image( $property_ID );
@@ -977,9 +977,9 @@ function dreamvilla_mp_listing_full_list_version2($property_ID, $property_sideba
 	$property_status = get_post_meta( $property_ID, 'pstatus', true );
 	
 	if ( $property_status == "sale" ){
-		$property_status = sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 	} else {
-		$property_status = sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 	}
 
 	$property_image = dreamvilla_mp_get_device_image( $property_ID );
@@ -1016,9 +1016,9 @@ function dreamvilla_mp_listing_full_list_version2($property_ID, $property_sideba
 					<label class="label-top-left">';
 						$property_status = get_post_meta( $property_ID, 'pstatus', true );
 						if ( $property_status == "sale" ){
-							$html .= sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+							$html .= sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 						} else {
-							$html .= sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+							$html .= sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 						}
 					$html .= '</label>
 					
@@ -1099,9 +1099,9 @@ function dreamvilla_mp_listing_full_list_version2($property_ID, $property_sideba
 				<label class="property-list-list-label corner">';
 					$property_status = get_post_meta( $property_ID, 'pstatus', true );
 					if ( $property_status == "sale" ){
-						$html .= sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+						$html .= sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 					} else {
-						$html .= sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+						$html .= sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 					}
 				$html .= '</label>
 
@@ -1171,9 +1171,9 @@ function dreamvilla_mp_listing_full_grid_version1($property_ID, $property_sideba
 	$property_status = get_post_meta( $property_ID, 'pstatus', true );
 	
 	if ( $property_status == "sale" ){
-		$property_status = sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 	} else {
-		$property_status = sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 	}
 
 	$property_image = dreamvilla_mp_get_device_image( $property_ID );
@@ -1208,9 +1208,9 @@ function dreamvilla_mp_listing_full_grid_version1($property_ID, $property_sideba
 			<label>'; 
 				$property_status = get_post_meta( $property_ID, 'pstatus', true );
 				if ( $property_status == "sale" ){
-					$html .= esc_html__('On Sale','dreamvilla-multiple-property');
+					$html .= esc_html__('Venta','dreamvilla-multiple-property');
 				} else {
-					$html .= esc_html__('On Rent','dreamvilla-multiple-property');
+					$html .= esc_html__('Alquiler','dreamvilla-multiple-property');
 				}
 		$html .= '</label>
 
@@ -1251,9 +1251,9 @@ function dreamvilla_mp_listing_full_grid_version2($property_ID, $property_sideba
 	$property_status = get_post_meta( $property_ID, 'pstatus', true );
 	
 	if ( $property_status == "sale" ){
-		$property_status = sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 	} else {
-		$property_status = sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+		$property_status = sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 	}
 
 	$property_image = dreamvilla_mp_get_device_image( $property_ID );
@@ -1292,9 +1292,9 @@ function dreamvilla_mp_listing_full_grid_version2($property_ID, $property_sideba
 			<label class="label-top-left">';
 				$property_status = get_post_meta( $property_ID, 'pstatus', true );
 				if ( $property_status == "sale" ){
-					$html .= esc_html__('On Sale','dreamvilla-multiple-property');
+					$html .= esc_html__('Venta','dreamvilla-multiple-property');
 				} else {
-					$html .= esc_html__('On Rent','dreamvilla-multiple-property');
+					$html .= esc_html__('Alquiler','dreamvilla-multiple-property');
 				}							
 			$html .= '</label>
 			'.dreamvilla_mp_agent_favorites_property_icon($property_ID).'

@@ -894,8 +894,8 @@ $single_property_detail = get_user_meta( $User_ID, 'add_single_property', true )
                                         <?php $PropertyStatus = get_post_meta( $Property_ID, 'pstatus', true ); ?>
                                         <select name="property_listed">
                                             <option value=""><?php esc_html_e('Listed In','dreamvilla-multiple-property'); ?></option>
-                                            <option value="rent" <?php if($PropertyStatus == "rent" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Rent','dreamvilla-multiple-property'); ?></option>
-                                            <option value="sale" <?php if($PropertyStatus == "sale" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Sale','dreamvilla-multiple-property'); ?></option>                                
+                                            <option value="rent" <?php if($PropertyStatus == "rent" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Alquiler','dreamvilla-multiple-property'); ?></option>
+                                            <option value="sale" <?php if($PropertyStatus == "sale" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Venta','dreamvilla-multiple-property'); ?></option>                                
                                         </select>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12">

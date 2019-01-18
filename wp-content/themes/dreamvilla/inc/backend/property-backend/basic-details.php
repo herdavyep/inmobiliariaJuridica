@@ -36,8 +36,8 @@
 			<label for="pstatus"><?php esc_html_e("Property","dreamvilla-multiple-property"); ?>: </label>
 		</div>
 		<div class="col-sm-8">
-			<input type="radio" name="pstatus" value="sale" class="pstatus" id="psale" <?php echo "checked=checked"; ?> > <label><?php esc_html_e("For Sale","dreamvilla-multiple-property"); ?></label>
-			<input type="radio" name="pstatus" value="rent" class="pstatus" id="prent" <?php if( $PropertyStatus == "rent" ) { echo "checked=checked"; } ?>><label><?php esc_html_e("For Rent","dreamvilla-multiple-property"); ?></label>						
+			<input type="radio" name="pstatus" value="sale" class="pstatus" id="psale" <?php echo "checked=checked"; ?> > <label><?php esc_html_e("Venta","dreamvilla-multiple-property"); ?></label>
+			<input type="radio" name="pstatus" value="rent" class="pstatus" id="prent" <?php if( $PropertyStatus == "rent" ) { echo "checked=checked"; } ?>><label><?php esc_html_e("Alquiler","dreamvilla-multiple-property"); ?></label>						
 		</div>
 		
 		<div class="col-sm-4">

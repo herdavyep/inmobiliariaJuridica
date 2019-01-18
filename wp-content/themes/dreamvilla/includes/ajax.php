@@ -609,9 +609,9 @@ function dreamvilla_mp_ajax_load_map_property() {
 		                <label>';
 							$property_status = get_post_meta( $post_query->post->ID, 'pstatus', true );
 							if ( $property_status == "sale" ){
-								$html .=sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+								$html .=sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 							} else {
-								$html .=sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+								$html .=sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 							}
 					$html .='</label>
 
