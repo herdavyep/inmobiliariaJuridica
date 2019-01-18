@@ -1,0 +1,165 @@
+body
+{
+	background: #f1f1f1 none repeat scroll 0 0 !important;
+}
+.no-margin{
+	margin:0px !important;
+}
+#property_detial .btn.btn-info {
+    min-width: 150px;
+}
+#title-prompt-text
+{
+	font-weight:unset;
+	line-height:1;
+}
+.admin-property-detail td {
+    padding: 10px 0;
+}
+
+.admin-property-detail label {
+    min-width: 145px;
+    margin-bottom: 0px;
+}
+.admin-property-detail label.pfeatures {
+    min-width: 250px;    
+}
+
+.table.show-table-property input[type="number"] {
+    width: 70px !important;
+}
+#addfloorplans.table.show-table-property input[type="number"],
+#addfloorplans.table.show-table-property input[type="text"],
+#addfloorplans.table.show-table-property textarea {
+    width: 100% !important;
+}
+.table.show-table-property td {
+	vertical-align: middle;
+}
+#addfloorplans.table.show-table-property td {
+    vertical-align: top;
+}
+.table.show-table-property img {
+	max-width: 100px;
+    max-height: 100px;
+}
+#contextual-help-wrap.hidden,
+#screen-options-wrap.hidden{
+    display: unset !important;
+}
+.theme_option_hedaer {
+    background: #ffffff none repeat scroll 0 0;
+    height: 100px;
+    width: 100%;
+    padding:0px 15px;
+    border:1px solid #F1F1F1;
+}
+.theme_option-logo{
+    height: 100%;
+    line-height: 7;
+}
+.pull-right.theme_option-logo > a > img{
+	height:100%;
+}
+.ui-tabs.ui-widget.ui-widget-content.ui-corner-all.ui-tabs-vertical.ui-helper-clearfix {
+    border: medium none;
+    height: 100%;
+    width: 100%;
+}
+.ui-widget-content{
+	background:#eeeeee;
+}
+.ui-tabs.ui-widget.ui-widget-content.ui-corner-all.ui-tabs-vertical.ui-helper-clearfix .row
+{
+	margin:0px;
+}
+.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 0;
+    padding: 0;
+    margin-top:25px;
+}
+.ui-tabs-anchor {
+    background: #ffffff none repeat scroll 0 0;
+    color:#5d6370;
+    font-size:15px;
+    font-family:"Montserrat";
+    height:50px;
+    border-bottom:1px solid #F1F1F1;
+    line-height: 2;    
+}
+.ui-state-active .ui-tabs-anchor,
+.ui-tabs-anchor:hover{
+	background:#23ccfc;
+}
+.ui-state-default.ui-corner-left {
+    border: 0 none !important;
+    border-radius: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.theme_option_form
+{
+    background: #ffffff none repeat scroll 0 0;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    width: calc(100% - 12em - 50px);	
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+.ui-tabs-vertical .ui-tabs-panel
+{
+	float: left !important;
+}
+#theme-option-other-tab label {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.postbox select{
+	vertical-align:unset;
+	height:26px;
+}
+#property_detial .ui-tabs.ui-widget.ui-widget-content.ui-corner-all.ui-tabs-vertical.ui-helper-clearfix{
+	padding-left:25px;
+	padding-bottom:25px;
+}
+#tabs .btn.btn-default.removebedroom,
+#tabs .btn.btn-default.addmorebedroombtn,
+#tabs .btn.btn-default.uploadlogo {
+	margin-bottom:10px;
+}
+#tabs .btn.btn-default.removebedroom{
+	margin-right:10px;
+}
+#addhomepageslider .theme_favicon_icon,
+#addgallery .theme_favicon_icon,
+#addfloorplans .theme_favicon_icon {
+	width:300px;
+	height:auto;
+	max-width:unset;
+	max-height:unset;
+}
+#addgallery td{
+	vertical-align:top;
+}
+
+.btn-group > label.btn.btn-default {
+	margin-left:0px !important;
+	margin-right:0px !important;
+}
+.google_place.ui-tabs-panel.ui-widget-content.ui-corner-bottom{
+	width:auto;
+}
+.google_place select,
+.google_place button{
+    margin-bottom: 0px !important;
+}
+.google_place .theme_favicon_icon {
+    margin-bottom:0px !important;
+    margin-right:10px !important;
+}
+.google_place select {
+    width: 170px;
+}
