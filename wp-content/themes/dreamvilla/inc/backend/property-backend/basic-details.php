@@ -1,7 +1,7 @@
 <div id="tabs-1" style="border:none;">
 	<div class="row">					
 		<div class="col-sm-4">
-			<label><?php esc_html_e("Banner Image","dreamvilla-multiple-property"); ?>:</label>
+			<label><?php esc_html_e("Imagen de bandera","dreamvilla-multiple-property"); ?>:</label>
 		</div>
 		<div class="col-sm-8">		
 			<table id="addbanner" class="table show-table-property">
@@ -26,14 +26,14 @@
 		</div>
 
 		<div class="col-sm-4">
-			<label><?php esc_html_e("Fetured","dreamvilla-multiple-property"); ?>:</label>
+			<label><?php esc_html_e("Destacados","dreamvilla-multiple-property"); ?>:</label>
 		</div>
 		<div class="col-sm-8">
-			<input type="checkbox" name="pfetured" value="yes" <?php if($PropertyFetured=='yes'){echo esc_attr("checked"); } ?> /> <label for="pfetured"><?php esc_html_e("Make this property fetured","dreamvilla-multiple-property"); ?>:</label>
+			<input type="checkbox" name="pfetured" value="yes" <?php if($PropertyFetured=='yes'){echo esc_attr("checked"); } ?> /> <label for="pfetured"><?php esc_html_e("Hacer esta propiedad destacada","dreamvilla-multiple-property"); ?>:</label>
 		</div>
 		
 		<div class="col-sm-4">
-			<label for="pstatus"><?php esc_html_e("Property","dreamvilla-multiple-property"); ?>: </label>
+			<label for="pstatus"><?php esc_html_e("Propiedad","dreamvilla-multiple-property"); ?>: </label>
 		</div>
 		<div class="col-sm-8">
 			<input type="radio" name="pstatus" value="sale" class="pstatus" id="psale" <?php echo "checked=checked"; ?> > <label><?php esc_html_e("Venta","dreamvilla-multiple-property"); ?></label>
@@ -41,12 +41,12 @@
 		</div>
 		
 		<div class="col-sm-4">
-			<label for="pprice"><?php esc_html_e("Price","dreamvilla-multiple-property"); ?>:</label>	
+			<label for="pprice"><?php esc_html_e("Precio","dreamvilla-multiple-property"); ?>:</label>	
 		</div>
 		<div class="col-sm-8">
 			<div class="row">						
 				<input type="text" name="pprice" value="<?php echo esc_attr($PropertyPrice[0]); ?>" id="pprice">
-				<input type="text" size="7" name="ppricetype" id="ppricetype" class="ppricetype" placeholder="Monthly" value="<?php echo esc_attr($PropertyPrice[1]); ?>" />
+				<input type="text" size="7" name="ppricetype" id="ppricetype" class="ppricetype" placeholder="Mensual" value="<?php echo esc_attr($PropertyPrice[1]); ?>" />
 			</div>
 		</div>
 
@@ -61,7 +61,7 @@
 	</div>	
 
 	<div class="row">		
-		<h1><?php esc_html_e("Essential Information","dreamvilla-multiple-property"); ?></h1>
+		<h1><?php esc_html_e("Información esencial","dreamvilla-multiple-property"); ?></h1>
 		<table id="essential" class="table show-table-property">
 			<tbody>
 				<?php

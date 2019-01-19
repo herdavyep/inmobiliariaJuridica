@@ -1,6 +1,6 @@
 @import url('../inc/visualcomposer/assets/js_composer.min.css'); /* Import Visual Composer Stylesheet */
 @import url('dreamvilla-mp-element.css'); /* Visual Composer Elements Stylesheet */
-@import url('dreamvilla-iconfont.css'); /* Import Dreamvila Icon Style */
+@import url('dreamvilla-iconfont.css'); /* Import Dreamvila Icon Style  heri*/
 
 /*
  * Table of content
@@ -7731,6 +7731,8 @@ p.profile-image-detail {
 	height: 40px;
 	border: none;
 	padding: 0px 20px;
+	display: none;
+
 }
 .dashboard-button .dropdown-menu {
 	background-color: #31A2E1;
@@ -7984,6 +7986,7 @@ p.profile-image-detail {
 	height: 40px;
 	border: none;
 	padding: 0px 20px;
+	display: none;
 }
 .dashboard-button .dropdown-menu {
 	background-color: #31a2e1;

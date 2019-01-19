@@ -70,9 +70,9 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 												
 												$property_status = get_post_meta( $post->ID, 'pstatus', true );
 												if ( $property_status == "sale" ){
-													$out .= sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+													$out .= sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 												} else {
-													$out .= sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+													$out .= sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 												}
 											$out .='
 											</label>';
@@ -83,7 +83,7 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 											}
 											$PropertyFetured = get_post_meta( $post->ID, 'pfetured', true);
 											if( $PropertyFetured == "yes" ){
-												$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Featured','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
+												$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Destacados','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
 											}
 										$out .= '
 										</div>
@@ -110,7 +110,7 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 												<ul>
 													<li class="left">
 														<img src="'.get_template_directory_uri().'/images/recent_bath.png" alt="Recent Bath" />
-														'.esc_html__('Bathrooms','dreamvilla-multiple-property').'
+														'.esc_html__('Baños','dreamvilla-multiple-property').'
 													</li>
 													<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($post->ID)).'</span></li>
 												</ul>'; 
@@ -121,7 +121,7 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 												<ul>
 													<li class="left">
 														<img src="'.get_template_directory_uri().'/images/recent_bed.png" alt="Recent Bed" />
-														'.sprintf( esc_html__('Beds','dreamvilla-multiple-property')).'
+														'.sprintf( esc_html__('Habitaciones','dreamvilla-multiple-property')).'
 													</li>
 													<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($post->ID)).'</span></li>
 												</ul>';
@@ -132,7 +132,7 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 												<ul>
 													<li class="left">
 														<img src="'.get_template_directory_uri().'/images/recent_garage.png" alt="Recent Garage" />
-														'.sprintf( esc_html__('Garages','dreamvilla-multiple-property')).'
+														'.sprintf( esc_html__('Garaje','dreamvilla-multiple-property')).'
 													</li>
 													<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pnoofgarage', true)).'</span></li>
 												</ul>';
@@ -240,9 +240,9 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 
 													$property_status = get_post_meta( $post->ID, 'pstatus', true );
 													if ( $property_status == "sale" ){
-														$out .= sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+														$out .= sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 													} else {
-														$out .= sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+														$out .= sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 													}
 												$out .= '</label>';
 												
@@ -252,7 +252,7 @@ function dreamvilla_featured_property_shortcode( $atts, $content = null ) {
 												}
 												$PropertyFetured = get_post_meta( $post->ID, 'pfetured', true);
 												if( $PropertyFetured == "yes" ){
-													$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Featured','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
+													$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Destacados','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
 												}
 											$out .= '
 											</div>

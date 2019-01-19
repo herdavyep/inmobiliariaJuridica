@@ -48,7 +48,7 @@ function dreamvilla_recent_blog($atts, $content = null) {
                             <a href="'.esc_url(get_day_link($archive_year, $archive_month, $archive_day)).'"><span> '.date_i18n( "F d,Y", $post_date ).' </span></a>
                             <a href="'.esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) )).'"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$fname).' '. " " . sprintf( esc_html__('%s','dreamvilla-multiple-property'),$lname).'</span></a>
                             <p class="multiple-blog-overview">'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),wp_trim_words( $recent["post_excerpt"], 12 )).'</p>
-                            <a class="multiple-blog-read-more" href="'.esc_url(get_permalink($recent["ID"])).'">'.esc_html__('Read More','dreamvilla-multiple-property').'</a><i class="fa fa-long-arrow-right"> </i>
+                            <a class="multiple-blog-read-more" href="'.esc_url(get_permalink($recent["ID"])).'">'.esc_html__('Leer más','dreamvilla-multiple-property').'</a><i class="fa fa-long-arrow-right"> </i>
                         </div>';
                     }
                 }
@@ -86,7 +86,7 @@ function dreamvilla_recent_blog($atts, $content = null) {
                                 </div>
                                 <p class="multiple-blog-overview">'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),wp_trim_words( $recent["post_excerpt"], 12 )).'</p>
                             </div>
-                            <a class="multiple-blog-read-more" href="'.esc_url(get_permalink($recent["ID"])).'">'.esc_html__('Read More','dreamvilla-multiple-property').'<i class="fa fa-long-arrow-right pull-right"> </i></a>
+                            <a class="multiple-blog-read-more" href="'.esc_url(get_permalink($recent["ID"])).'">'.esc_html__('Leer más','dreamvilla-multiple-property').'<i class="fa fa-long-arrow-right pull-right"> </i></a>
                         </div>';
                     }
                 }

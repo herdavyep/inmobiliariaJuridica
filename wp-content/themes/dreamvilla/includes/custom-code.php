@@ -50,7 +50,7 @@ add_action('post_edit_form_tag', 'dreamvilla_mp_update_edit_form');
 
 // Return price type type of property
 function dreamvilla_mp_get_room_type(){
-	return array( "MasterBedroom" => "Master Bedroom", "Bedroom" => "Bedroom", "LivingRoom" => "Living Room", "DiningRoom" => "Dining Room" );
+	return array("Habitación principal" => "Habitación principal", "Habitación" => "Habitación", "Sala de estar" => "Sala de estar", "Comedor" => "Comedor");
 }
 
 // Return google near by place

@@ -36,15 +36,15 @@ function dreamvilla_contact_form($atts, $content = null) {
 	<form class="plugin-agnet-contact-form-contact-page" name="send-agent-mail" method="post">
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" name="full_name" class="full_name" placeholder="'.esc_html__('Full Name','dreamvilla-multiple-property').'" required>
-				<input type="text" name="p_number" class="p_number" placeholder="'.esc_html__('Phone Number','dreamvilla-multiple-property').'" required>
-				<input type="email" name="email_address" class="email_address" placeholder="'.esc_html__('Email Address','dreamvilla-multiple-property').'" required>
+				<input type="text" name="full_name" class="full_name" placeholder="'.esc_html__('Nombre completo','dreamvilla-multiple-property').'" required>
+				<input type="text" name="p_number" class="p_number" placeholder="'.esc_html__('Numero de telefono','dreamvilla-multiple-property').'" required>
+				<input type="email" name="email_address" class="email_address" placeholder="'.esc_html__('Correo electronico','dreamvilla-multiple-property').'" required>
 				<input type="hidden" name="agent_email_address" class="agent_email_address" value="'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$office_email).'" >
 				'.$google_recaptcha.'
 				<input type="submit" name="sendmessage" class="send-message" value="'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$submit_label ).'" />
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<textarea name="message" class="message" '.$textarea_style.' placeholder="'.esc_html__('Message','dreamvilla-multiple-property').'" required></textarea>					
+				<textarea name="message" class="message" '.$textarea_style.' placeholder="'.esc_html__('Mensaje','dreamvilla-multiple-property').'" required></textarea>					
 			</div>
 		</div>
 	</form>';

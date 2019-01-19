@@ -103,9 +103,9 @@ function dreamvilla_recent_property_shortcode( $atts, $content = null ) {
 									<label>';
 										$property_status = get_post_meta( $post->ID, 'pstatus', true );
 										if ( $property_status == "sale" ){
-											$out .= sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+											$out .= sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 										} else {
-											$out .= sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+											$out .= sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 										}
 									$out .= '
 									</label>';
@@ -115,7 +115,7 @@ function dreamvilla_recent_property_shortcode( $atts, $content = null ) {
 									}
 									$PropertyFetured = get_post_meta( $post->ID, 'pfetured', true);
 									if( $PropertyFetured == "yes" ){
-										$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Featured','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
+										$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Destacados','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
 									}
 								$out .= '
 								</div>
@@ -247,9 +247,9 @@ function dreamvilla_recent_property_shortcode( $atts, $content = null ) {
 										
 										$property_status = get_post_meta( $post->ID, 'pstatus', true );
 										if ( $property_status == "sale" ){
-											$out .= sprintf( esc_html__('On Sale','dreamvilla-multiple-property'));
+											$out .= sprintf( esc_html__('Venta','dreamvilla-multiple-property'));
 										} else {
-											$out .= sprintf( esc_html__('On Rent','dreamvilla-multiple-property'));
+											$out .= sprintf( esc_html__('Alquiler','dreamvilla-multiple-property'));
 										}
 									$out .= '
 									</label>';
@@ -259,7 +259,7 @@ function dreamvilla_recent_property_shortcode( $atts, $content = null ) {
 									}
 									$PropertyFetured = get_post_meta( $post->ID, 'pfetured', true);
 									if( $PropertyFetured == "yes" ){
-										$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Featured','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
+										$out .= '<span class="featured-property-icon" href="javascript:void(0)"> <span class="featuredtext">'.esc_html__('Destacados','dreamvilla-multiple-property').'</span> <i class="fa fa-star"></i></span>';
 									}
 								$out .= '
 								</div>

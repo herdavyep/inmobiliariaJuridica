@@ -35,7 +35,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                         case 'keyword':
                                              $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
-                                                <input type="text" name="keyword" id="keyword" placeholder="'.esc_html__("Keyword","dreamvilla-multiple-property").'">
+                                                <input type="text" name="keyword" id="keyword" placeholder="'.esc_html__("Palabra clave","dreamvilla-multiple-property").'">
                                             </div>';
                                         break;
 
@@ -43,7 +43,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
                                                 <select name="type" class="selectpicker" data-width="100%">
-                                                    <option value="">'.esc_html__('All Type','dreamvilla-multiple-property').'</option>';
+                                                    <option value="">'.esc_html__('Tipo de inmueble','dreamvilla-multiple-property').'</option>';
                                                     $property_categories = get_terms("property_category", array("orderby" => "slug", "parent" => 0, 'hide_empty' => 0) );
                                                     if ( ! empty( $property_categories ) && ! is_wp_error( $property_categories ) ){
                                                         foreach ( $property_categories as $term ) {
@@ -60,9 +60,9 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
                                                 <select name="status" class="selectpicker" data-width="100%">
-                                                    <option value="" selected>'.esc_html__('All Status','dreamvilla-multiple-property').'</option>
-                                                    <option value="sale" >'.esc_html__('For Sale','dreamvilla-multiple-property').'</option>
-                                                    <option value="rent" >'.esc_html__('For Rent','dreamvilla-multiple-property').'</option>
+                                                    <option value="" selected>'.esc_html__('Estados','dreamvilla-multiple-property').'</option>
+                                                    <option value="sale" >'.esc_html__('Venta','dreamvilla-multiple-property').'</option>
+                                                    <option value="rent" >'.esc_html__('Alquiler','dreamvilla-multiple-property').'</option>
                                                 </select>
                                             </div>';
                                         break;
@@ -71,7 +71,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
                                                 <select name="location" class="selectpicker" data-width="100%">
-                                                    <option value="">'.esc_html__('All Location','dreamvilla-multiple-property').'</option>';
+                                                    <option value="">'.esc_html__('Todas las ubicaciones','dreamvilla-multiple-property').'</option>';
                                                     $property_categories = get_terms("location", array("orderby" => "slug", "parent" => 0, 'hide_empty' => 0) );
                                                     if ( ! empty( $property_categories ) && ! is_wp_error( $property_categories ) ){
                                                         foreach ( $property_categories as $term ) {
@@ -88,7 +88,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
                                                 <select name="bedroom" class="selectpicker" data-width="100%">
-                                                    <option value="">'.esc_html__('All Bedrooms','dreamvilla-multiple-property').'</option>';
+                                                    <option value="">'.esc_html__('Numero de habitaciones','dreamvilla-multiple-property').'</option>';
                                                     for ($i=1; $i <=10; $i++) {
                                                         $out .= '<option value="'.esc_attr($i).'" >'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$i).'</option>';
                                                     }
@@ -101,7 +101,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
                                                 <select name="bathroom" class="selectpicker" data-width="100%">
-                                                    <option value="">'.esc_html__('All Bathrooms','dreamvilla-multiple-property').'</option>';
+                                                    <option value="">'.esc_html__('Numero de baños','dreamvilla-multiple-property').'</option>';
                                                     for ($i=1; $i <=10; $i++) {
                                                         $out .= '<option value="'.esc_attr($i).'" >'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$i).'</option>';
                                                     }
@@ -114,7 +114,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             $out .= '
                                             <div class="col-xs-12 col-sm-6 col-md-3">
                                                 <select name="garage" class="selectpicker" data-width="100%">
-                                                    <option value="">'.esc_html__('All Garages','dreamvilla-multiple-property').'</option>';
+                                                    <option value="">'.esc_html__('Numero de garajes','dreamvilla-multiple-property').'</option>';
                                                     for ($i=1; $i <=10; $i++) {
                                                         $out .= '<option value="'.esc_attr($i).'" >'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$i).'</option>';
                                                     }
@@ -163,7 +163,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             </div>
                                             <div class="col-xs-6 col-sm-4 col-md-2">
                                                 <span class="more-filter" id="more-filter">
-                                                    '.esc_html__('More Filters','dreamvilla-multiple-property').' <i class="glyphicon glyphicon-triangle-bottom"> </i>
+                                                    '.esc_html__('Más filtros','dreamvilla-multiple-property').' <i class="glyphicon glyphicon-triangle-bottom"> </i>
                                                 </span>
                                             </div>
                                             <div class="col-xs-6 col-sm-5 col-md-3 pull-right">
@@ -229,7 +229,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                             case 'keyword':
                                                  $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
-                                                    <input type="text" name="keyword" id="keyword" placeholder="'.esc_html__("Keyword","dreamvilla-multiple-property").'">
+                                                    <input type="text" name="keyword" id="keyword" placeholder="'.esc_html__("Palabra clave","dreamvilla-multiple-property").'">
                                                 </div>';
                                             break;
 
@@ -237,7 +237,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                                     <select name="type" class="selectpicker" data-width="100%">
-                                                        <option value="">'.esc_html__('All Type','dreamvilla-multiple-property').'</option>';
+                                                        <option value="">'.esc_html__('Tipo de inmueble','dreamvilla-multiple-property').'</option>';
                                                         $property_categories = get_terms("property_category", array("orderby" => "slug", "parent" => 0, 'hide_empty' => 0) );
                                                         if ( ! empty( $property_categories ) && ! is_wp_error( $property_categories ) ){
                                                             foreach ( $property_categories as $term ) {
@@ -254,9 +254,9 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                                     <select name="status" class="selectpicker" data-width="100%">
-                                                        <option value="" selected>'.esc_html__('All Status','dreamvilla-multiple-property').'</option>
-                                                        <option value="sale" >'.esc_html__('For Sale','dreamvilla-multiple-property').'</option>
-                                                        <option value="rent" >'.esc_html__('For Rent','dreamvilla-multiple-property').'</option>
+                                                        <option value="" selected>'.esc_html__('Todos los estados','dreamvilla-multiple-property').'</option>
+                                                        <option value="sale" >'.esc_html__('Venta','dreamvilla-multiple-property').'</option>
+                                                        <option value="rent" >'.esc_html__('Alquiler','dreamvilla-multiple-property').'</option>
                                                     </select>
                                                 </div>';
                                             break;
@@ -265,7 +265,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                                     <select name="location" class="selectpicker" data-width="100%">
-                                                        <option value="">'.esc_html__('All Location','dreamvilla-multiple-property').'</option>';
+                                                        <option value="">'.esc_html__('Todas las ubicaciones','dreamvilla-multiple-property').'</option>';
                                                         $property_categories = get_terms("location", array("orderby" => "slug", "parent" => 0, 'hide_empty' => 0) );
                                                         if ( ! empty( $property_categories ) && ! is_wp_error( $property_categories ) ){
                                                             foreach ( $property_categories as $term ) {
@@ -282,7 +282,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                                     <select name="bedroom" class="selectpicker" data-width="100%">
-                                                        <option value="">'.esc_html__('All Bedrooms','dreamvilla-multiple-property').'</option>';
+                                                        <option value="">'.esc_html__('Numero de habitaciones','dreamvilla-multiple-property').'</option>';
                                                         for ($i=1; $i <=10; $i++) {
                                                             $out .= '<option value="'.esc_attr($i).'" >'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$i).'</option>';
                                                         }
@@ -295,7 +295,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                                     <select name="bathroom" class="selectpicker" data-width="100%">
-                                                        <option value="">'.esc_html__('All Bathrooms','dreamvilla-multiple-property').'</option>';
+                                                        <option value="">'.esc_html__('Numero de baños','dreamvilla-multiple-property').'</option>';
                                                         for ($i=1; $i <=10; $i++) {
                                                             $out .= '<option value="'.esc_attr($i).'" >'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$i).'</option>';
                                                         }
@@ -308,7 +308,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 $out .= '
                                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                                     <select name="garage" class="selectpicker" data-width="100%">
-                                                        <option value="">'.esc_html__('All Garages','dreamvilla-multiple-property').'</option>';
+                                                        <option value="">'.esc_html__('Numero de garajes','dreamvilla-multiple-property').'</option>';
                                                         for ($i=1; $i <=10; $i++) {
                                                             $out .= '<option value="'.esc_attr($i).'" >'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),$i).'</option>';
                                                         }
@@ -357,7 +357,7 @@ function dreamvilla_property_filter_shortcode( $atts, $content = null ){
                                                 </div>
                                                 <div class="col-xs-6 col-sm-4 col-md-2">
                                                     <span class="more-filter" id="more-filter">
-                                                        '.esc_html__('More Filters','dreamvilla-multiple-property').' <i class="glyphicon glyphicon-triangle-bottom"> </i>
+                                                        '.esc_html__('Más filtros','dreamvilla-multiple-property').' <i class="glyphicon glyphicon-triangle-bottom"> </i>
                                                     </span>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-5 col-md-3 pull-right">

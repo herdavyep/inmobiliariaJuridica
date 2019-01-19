@@ -34,7 +34,7 @@
 <div id="tabs-10" style="border:none;">
 	<div class="row">	
 		<div class="col-sm-5">
-			<label for="pvideo"><?php esc_html_e("Video Placeholder Image","dreamvilla-multiple-property"); ?></label>
+			<label for="pvideo"><?php esc_html_e("Imagen para el video","dreamvilla-multiple-property"); ?></label>
 		</div>
 		<div class="col-sm-7">
 			<?php if( $PropertyVideoPlaceholder ){ ?>
@@ -45,30 +45,30 @@
 		</div>
 
 		<div class="col-sm-5">
-			<label for="pvideoheight"><?php esc_html_e("Video Height","dreamvilla-multiple-property"); ?></label>
+			<label for="pvideoheight"><?php esc_html_e("Altura del video","dreamvilla-multiple-property"); ?></label>
 		</div>
 		<div class="col-sm-7">
 			<input type="number" name="pvideoheight" id="pvideoheight" value="<?php echo esc_attr($PropertyVideoHeight); ?>" />
 		</div>
 		
 		<div class="col-sm-5">
-			<label for="pvideowidth"><?php esc_html_e("Video Width","dreamvilla-multiple-property"); ?></label>
+			<label for="pvideowidth"><?php esc_html_e("Anchura del video","dreamvilla-multiple-property"); ?></label>
 		</div>
 		<div class="col-sm-7">
 			<input type="number" name="pvideowidth" id="pvideowidth" value="<?php echo esc_attr($PropertyVideoWidth); ?>" />
 		</div>
 		
 		<div class="col-sm-5">
-			<label for="pvideourl"><?php esc_html_e("Video Embed Url","dreamvilla-multiple-property"); ?></label>
+			<label for="pvideourl"><?php esc_html_e("Escribir URL del video","dreamvilla-multiple-property"); ?></label>
 		</div>
 		<div class="col-sm-7">
 			<input type="text" name="pvideourl" id="pvideourl" value="<?php echo esc_attr($PropertyVideoUrl); ?>" placeholder="" />
-			<label for="pvideourl"><?php esc_html_e("Embed URL Ex : https://www.youtube.com/embed/musbvPUkRov0bhU","dreamvilla-multiple-property"); ?><br>
+			<label for="pvideourl"><?php esc_html_e("Ejemplos : https://www.youtube.com/embed/musbvPUkRov0bhU","dreamvilla-multiple-property"); ?><br>
 			<?php esc_html_e("http://player.vimeo.com/video/531705441599","dreamvilla-multiple-property"); ?></label>			
 		</div>
 
 		<div class="col-sm-5">
-			<label><?php esc_html_e("Advertisement","dreamvilla-multiple-property"); ?></label>
+			<label><?php esc_html_e("Anuncio","dreamvilla-multiple-property"); ?></label>
 		</div>
 		<div class="col-sm-7">
 			<textarea name="padvertisement"><?php echo esc_attr($PropertyAdvertisement); ?></textarea>
