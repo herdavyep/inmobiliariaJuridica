@@ -37,7 +37,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 					if($category){
 						$flag = 0; ?>						
 							<ul class="property-type">
-								<li><a data-id="all-proeprty" class="active" href="javascript:void(0);"><?php esc_html_e("All","dreamvilla-multiple-property"); ?></a></li><?php
+								<li><a data-id="all-proeprty" class="active" href="javascript:void(0);"><?php esc_html_e("Todo","dreamvilla-multiple-property"); ?></a></li><?php
 								foreach($category as $cat){ ?>
 									<li><a href="javascript:void(0);" data-id="<?php echo esc_attr($cat->term_id);?>"><?php printf(esc_html__('%s','dreamvilla-multiple-property'),$cat->name);?></a></li><?php 
 									$flag = 1; 
@@ -75,7 +75,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-8">
 								<select class="property-type">
-									<option value="all-proeprty" data-id="all-proeprty" class="active"><?php esc_html_e("Show All","dreamvilla-multiple-property"); ?></option><?php
+									<option value="all-proeprty" data-id="all-proeprty" class="active"><?php esc_html_e("Ver todo","dreamvilla-multiple-property"); ?></option><?php
 									foreach($category as $cat){ ?>
 										<option value="<?php echo esc_attr($cat->term_id); ?>" data-id="<?php echo esc_attr($cat->term_id); ?>" ><?php printf(esc_html__('%s','dreamvilla-multiple-property'),$cat->name);?></option><?php
 										$flag = 1; 

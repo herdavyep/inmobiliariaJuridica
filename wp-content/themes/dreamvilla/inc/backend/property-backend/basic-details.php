@@ -60,7 +60,14 @@
 		</div>			
 	</div>	
 
-	<div class="row">		
+
+
+</div>
+
+
+<?php /*
+
+<div class="row">		
 		<h1><?php esc_html_e("Información esencial","dreamvilla-multiple-property"); ?></h1>
 		<table id="essential" class="table show-table-property">
 			<tbody>
@@ -106,5 +113,6 @@
 			</tbody>
 		</table>
 	</div>
-
-</div>
+ 
+	*/
+	?>

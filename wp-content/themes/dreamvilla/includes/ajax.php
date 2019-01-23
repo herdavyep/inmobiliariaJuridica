@@ -597,7 +597,7 @@ function dreamvilla_mp_ajax_load_map_property() {
 
 				$PropertyFetured = get_post_meta( $post_query->post->ID, 'pfetured', true);
 				if( $PropertyFetured == "yes" ){
-					$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Featured</span></span>';
+					$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Destacado</span></span>';
 				} else {
 					$featured_proeprty_label_icon = '';
 				}

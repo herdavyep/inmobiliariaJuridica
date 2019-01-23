@@ -559,7 +559,7 @@ h3.section-heading::before {
 }
 .menu {
 	float: left;
-	width: 83%;
+	width: 103%;
 	min-height: 105px;
 	text-transform:uppercase;
 	position: relative;
@@ -858,7 +858,8 @@ h3.section-heading::before {
 	outline: none;
 	float: right;
 	margin-top: 30px;
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	display:none;
 }
 .contact_detial {
 	float: left;
@@ -2258,6 +2259,7 @@ a.schedule_visit_href_btn:hover {
 	z-index: 2;
 	text-align:center;
 	overflow:hidden;
+	display: none;
 }
 
 .inner-page-header-area > img {
@@ -5930,7 +5932,7 @@ h3.multiple-location-title-homepage2 {
 	margin-top:-84px;
 	float:left;
 	width:100%;
-	bottom:-40px;
+	bottom:-100px;
 	z-index:1;
     background-color: rgba(245,248,249, 0);
 }
@@ -6067,6 +6069,7 @@ h3.multiple-location-title-homepage2 {
 	font-size: 14px;
 }
 .search-filter-form .submit-filter{
+	margin-bottom: 40px;
 	font-family: 'Montserrat',sans-serif;
 	font-size: 14px;
 	font-weight: normal;

@@ -44,7 +44,7 @@ if ( have_posts() ):
 							<?php $PropertyFetured = get_post_meta( $post->ID, 'pfetured', true);
 							if( $PropertyFetured == "yes" ){ ?>							
 							<div class="featuredcontent">		
-								<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="textfeatured">Featured </span> </span>  
+								<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="textfeatured">Destacado </span> </span>  
 							</div><?php
 							} ?>
 							<div id="featureheart">
@@ -99,15 +99,15 @@ if ( have_posts() ):
 							<?php if(dreamvilla_mp_number_of_bathroom($post->ID) != "" && dreamvilla_mp_number_of_bathroom($post->ID) > 0){ ?> 
 								<div class="col-xs-12 col-sm-3 col-md-3 property-detail-facility-icon">
 									<img src="<?php echo get_template_directory_uri(); ?>/images/recent_bath_white.png" alt="Recent Bath" />
-									<label><?php esc_html_e('Bathrooms','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($post->ID)); ?></span></div>
+									<label><?php esc_html_e('Baños','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($post->ID)); ?></span></div>
 							<?php } if(dreamvilla_mp_number_of_bedroom($post->ID) != "" && dreamvilla_mp_number_of_bedroom($post->ID) > 0){ ?>
 								<div class="col-xs-12 col-sm-3 col-md-3 property-detail-facility-icon">
 									<img src="<?php echo get_template_directory_uri(); ?>/images/recent_bed_white.png" alt="Recent Bed" />
-									<label><?php esc_html_e('Bedrooms','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($post->ID)); ?></span></div>
+									<label><?php esc_html_e('Habitaciones','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($post->ID)); ?></span></div>
 							<?php } if(get_post_meta( $post->ID, 'pnoofgarage', true) != "" && get_post_meta( $post->ID, 'pnoofgarage', true) > 0){ ?>
 								<div class="col-xs-12 col-sm-3 col-md-3 property-detail-facility-icon">
 									<img src="<?php echo get_template_directory_uri(); ?>/images/recent_garage_white.png" alt="Recent Garage" />
-									<label><?php esc_html_e('Garages','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pnoofgarage', true)); ?></span></div>
+									<label><?php esc_html_e('Garajes','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pnoofgarage', true)); ?></span></div>
 							<?php } ?>
 						</div>
 					</div>
@@ -239,28 +239,28 @@ if ( have_posts() ):
 								    }
 								    
 								    if( empty($SwimmingPoolDetails) ){
-								    	$SwimmingPoolDetails[0]['pswimmingpoolsize'] = '';
+								    	$SwimmingPoolDetails[0]['pswimmingpoolsize'] = ''; 
 								    }
 
 								    if( $RoomDetails ){
 										foreach ($RoomDetails as $key => $value) {
 											
 											if( $value['proomtype'] == 'Bedroom' ){ $BedroomCounter++; ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Bedroom','dreamvilla-multiple-property'); echo ' '.$BedroomCounter; ?></div>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Habitación','dreamvilla-multiple-property'); echo ' '.$BedroomCounter; ?></div>
 													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$value['proomsize']); ?> </div><?php
 											}
 
 											if( $value['proomtype'] != 'Bedroom' && isset($RoomType[$value['proomtype']]) ){
-												if( $RoomType[$value['proomtype']] == 'Master Bedroom' ){ ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Master Bedroom','dreamvilla-multiple-property'); ?></div><?php
+												if( $RoomType[$value['proomtype']] == 'Habitación principal' ){ ?>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Habitación principal','dreamvilla-multiple-property'); ?></div><?php
 												}
 
-												if( $RoomType[$value['proomtype']] == 'Living Room' ){ ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Living Room','dreamvilla-multiple-property'); ?></div><?php
+												if( $RoomType[$value['proomtype']] == 'Sala de estar' ){ ?>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Sala','dreamvilla-multiple-property'); ?></div><?php
 												}
 
-												if( $RoomType[$value['proomtype']] == 'Dining Room' ){ ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Dining Room','dreamvilla-multiple-property'); ?></div><?php
+												if( $RoomType[$value['proomtype']] == 'Comedor' ){ ?>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Comedor','dreamvilla-multiple-property'); ?></div><?php
 												} ?>											
 												
 												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$value['proomsize']); ?> </div><?php
@@ -268,7 +268,7 @@ if ( have_posts() ):
 										}
 									}
 									if( $KitchenDetails[0]['pkitchensize'] ) { ?>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Kitchen','dreamvilla-multiple-property'); ?> </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Cocina','dreamvilla-multiple-property'); ?> </div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$KitchenDetails[0]['pkitchensize']); ?> </div><?php
 									}
 				
@@ -279,18 +279,18 @@ if ( have_posts() ):
 
 									if( $BathroomDetails) {
 										foreach($BathroomDetails as $key => $value) {?>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Bathroom','dreamvilla-multiple-property'); ?> </div>
+											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Baño','dreamvilla-multiple-property'); ?> </div>
 											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$BathroomDetails[$key]['pbathroomsize']); ?></div><?php
 										}
 									}
 				
 									if( $GymDetails[0]['pgymsize'] ) { ?>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Gym','dreamvilla-multiple-property'); ?> </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Gimnasio','dreamvilla-multiple-property'); ?> </div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$GymDetails[0]['pgymsize']); ?></div><?php
 									}
 
 									if( $SwimmingPoolDetails[0]['pswimmingpoolsize'] ) { ?>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Swimming Pool','dreamvilla-multiple-property'); ?> </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Piscina','dreamvilla-multiple-property'); ?> </div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$SwimmingPoolDetails[0]['pswimmingpoolsize']); ?></div><?php 
 									} ?>
 								</div><?php
@@ -337,8 +337,8 @@ if ( have_posts() ):
 										<img class="theme_favicon_icon" width="25%" alt="Floor Plan" src="<?php echo esc_attr($PropertyFloors[$key]['floorplanimage']); ?>">
 										<div class="floorplan_options">
 											<span><?php echo esc_html($PropertyFloors[$key]['floorsqrt']); ?> sq/ft</span>
-											<span><?php echo esc_html($PropertyFloors[$key]['floorbedrooms']); esc_html_e(' Bedrooms','dreamvilla-multiple-property'); ?></span>
-											<span><?php echo esc_html($PropertyFloors[$key]['floorbathrooms']); esc_html_e(' Bathrooms','dreamvilla-multiple-property'); ?> </span>
+											<span><?php echo esc_html($PropertyFloors[$key]['floorbedrooms']); esc_html_e(' Habitaciones','dreamvilla-multiple-property'); ?></span>
+											<span><?php echo esc_html($PropertyFloors[$key]['floorbathrooms']); esc_html_e(' Baños','dreamvilla-multiple-property'); ?> </span>
 											<span class="floor-plan-price"><?php echo esc_html($PropertyFloors[$key]['floorprice']); ?></span>
 										</div>
 										<p class="description"><?php echo esc_html($PropertyFloors[$key]['floordetail']); ?></p>
@@ -613,7 +613,7 @@ if ( have_posts() ):
 								<h4><?php printf(esc_html__('%s','dreamvilla-multiple-property'), $dreamvilla_options["getdirectionstitle"]);?></h4>										
 								<div id="GoogleMapGetDirections" style="width:100%;height:285px;"></div>
 								<form>
-									<input type="text" id="GetDirectionsAddress" placeholder="<?php esc_html_e("From Address","dreamvilla-multiple-property"); ?>" />
+									<input type="text" id="GetDirectionsAddress" placeholder="<?php esc_html_e("Dirección","dreamvilla-multiple-property"); ?>" />
 									<button type="button" id="GetDirections"><?php printf(esc_html__("%s","dreamvilla-multiple-property"), $dreamvilla_options["getdirectionstitle"]); ?></button>
 								</form>										
 							</div>
@@ -1074,12 +1074,12 @@ if ( have_posts() ):
 										} /*End of property gallery condition*/ ?>
 									</div>
 
-									<?php if( $PropertyGallery ){ ?>
+									<?php if( $PropertyGallery ){ ?> 
 
 											<?php $PropertyFetured = get_post_meta( $post->ID, 'pfetured', true);
 												if( $PropertyFetured == "yes" ){ ?>	
 													<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i>
-														<span class="textfeatured">Featured</span>
+														<span class="textfeatured">Destacado</span>
 													</span>
 											<?php
 												}?>
@@ -1143,15 +1143,15 @@ if ( have_posts() ):
 												<?php if(dreamvilla_mp_number_of_bathroom($post->ID) != "" && dreamvilla_mp_number_of_bathroom($post->ID) > 0){ ?> 
 													<div class="col-xs-12 col-sm-3 col-md-3 property-detail-facility-icon">
 														<img src="<?php echo get_template_directory_uri(); ?>/images/recent_bath.png" alt="Recent Bath" />
-														<label><?php esc_html_e('Bathrooms','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($post->ID)); ?></span></div>
+														<label><?php esc_html_e('Baños','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($post->ID)); ?></span></div>
 												<?php } if(dreamvilla_mp_number_of_bedroom($post->ID) != "" && dreamvilla_mp_number_of_bedroom($post->ID) > 0){ ?>
 													<div class="col-xs-12 col-sm-3 col-md-3 property-detail-facility-icon">
 														<img src="<?php echo get_template_directory_uri(); ?>/images/recent_bed.png" alt="Recent Bed" />
-														<label><?php esc_html_e('Bedrooms','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($post->ID)); ?></span></div>
+														<label><?php esc_html_e('Habitaciones','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($post->ID)); ?></span></div>
 												<?php } if(get_post_meta( $post->ID, 'pnoofgarage', true) != "" && get_post_meta( $post->ID, 'pnoofgarage', true) > 0){ ?>
 													<div class="col-xs-12 col-sm-3 col-md-3 property-detail-facility-icon">
 														<img src="<?php echo get_template_directory_uri(); ?>/images/recent_garage.png" alt="Recent Garage" />
-														<label><?php esc_html_e('Garages','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pnoofgarage', true)); ?></span></div>
+														<label><?php esc_html_e('Garajes','dreamvilla-multiple-property'); ?></label><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pnoofgarage', true)); ?></span></div>
 												<?php } ?>
 											</div>
 										</div>
@@ -1284,21 +1284,21 @@ if ( have_posts() ):
 										foreach ($RoomDetails as $key => $value) {
 											
 											if( $value['proomtype'] == 'Bedroom' ){ $BedroomCounter++; ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Bedroom','dreamvilla-multiple-property'); echo ' '.$BedroomCounter; ?></div>
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Habitación','dreamvilla-multiple-property'); echo ' '.$BedroomCounter; ?></div>
 													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$value['proomsize']); ?> </div><?php
 											}
 
 											if( $value['proomtype'] != 'Bedroom'){
 												if( $RoomType[$value['proomtype']] == 'Master Bedroom' ){ ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Master Bedroom','dreamvilla-multiple-property'); ?></div><?php
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Habitación principal','dreamvilla-multiple-property'); ?></div><?php
 												}
 
 												if( $RoomType[$value['proomtype']] == 'Living Room' ){ ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Living Room','dreamvilla-multiple-property'); ?></div><?php
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Sala','dreamvilla-multiple-property'); ?></div><?php
 												}
 
 												if( $RoomType[$value['proomtype']] == 'Dining Room' ){ ?>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Dining Room','dreamvilla-multiple-property'); ?></div><?php
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Comedor','dreamvilla-multiple-property'); ?></div><?php
 												} ?>											
 												
 												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$value['proomsize']); ?> </div><?php
@@ -1306,7 +1306,7 @@ if ( have_posts() ):
 										}
 									}
 									if( $KitchenDetails[0]['pkitchensize'] ) { ?>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Kitchen','dreamvilla-multiple-property'); ?> </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Cocina','dreamvilla-multiple-property'); ?> </div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$KitchenDetails[0]['pkitchensize']); ?> </div><?php
 									}
 				
@@ -1317,18 +1317,18 @@ if ( have_posts() ):
 									
 									if( $BathroomDetails) {
 										foreach($BathroomDetails as $key => $value) {?>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Bathroom','dreamvilla-multiple-property'); ?> </div>
+											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Baño','dreamvilla-multiple-property'); ?> </div>
 											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$BathroomDetails[$key]['pbathroomsize']); ?></div><?php
 										}
 									}
 				
 									if( $GymDetails[0]['pgymsize'] ) { ?>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Gym','dreamvilla-multiple-property'); ?> </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Gimnasio','dreamvilla-multiple-property'); ?> </div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$GymDetails[0]['pgymsize']); ?></div><?php
 									}
 
 									if( $SwimmingPoolDetails[0]['pswimmingpoolsize'] ) { ?>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Swimming Pool','dreamvilla-multiple-property'); ?> </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-label"><?php esc_html_e('Piscina','dreamvilla-multiple-property'); ?> </div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 information-value"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$SwimmingPoolDetails[0]['pswimmingpoolsize']); ?></div><?php 
 									} ?>
 								</div><?php
@@ -1374,8 +1374,8 @@ if ( have_posts() ):
 										<img class="theme_favicon_icon" width="25%" alt="Floor Plan" src="<?php echo esc_attr($PropertyFloors[$key]['floorplanimage']); ?>">
 										<div class="floorplan_options">
 											<span><?php echo esc_html($PropertyFloors[$key]['floorsqrt']); ?> sq/ft</span>
-											<span><?php echo esc_html($PropertyFloors[$key]['floorbedrooms']); esc_html_e(' Bedrooms','dreamvilla-multiple-property'); ?></span>
-											<span><?php echo esc_html($PropertyFloors[$key]['floorbathrooms']); esc_html_e(' Bathrooms','dreamvilla-multiple-property'); ?> </span>
+											<span><?php echo esc_html($PropertyFloors[$key]['floorbedrooms']); esc_html_e(' Habitaciones','dreamvilla-multiple-property'); ?></span>
+											<span><?php echo esc_html($PropertyFloors[$key]['floorbathrooms']); esc_html_e(' Baños','dreamvilla-multiple-property'); ?> </span>
 											<span class="floor-plan-price"><?php echo esc_html($PropertyFloors[$key]['floorprice']); ?></span>
 										</div>
 										<p class="description"><?php echo esc_html($PropertyFloors[$key]['floordetail']); ?></p>
@@ -1650,7 +1650,7 @@ if ( have_posts() ):
 								<h4><?php printf(esc_html__('%s','dreamvilla-multiple-property'), $dreamvilla_options["getdirectionstitle"]);?></h4>										
 								<div id="GoogleMapGetDirections" style="width:100%;height:285px;"></div>
 								<form>
-									<input type="text" id="GetDirectionsAddress" placeholder="<?php esc_html_e("From Address","dreamvilla-multiple-property"); ?>" />
+									<input type="text" id="GetDirectionsAddress" placeholder="<?php esc_html_e("Dirección","dreamvilla-multiple-property"); ?>" />
 									<button type="button" id="GetDirections"><?php printf(esc_html__("%s","dreamvilla-multiple-property"), $dreamvilla_options["getdirectionstitle"]); ?></button>
 								</form>										
 							</div>

@@ -46,7 +46,7 @@ if ( ! function_exists( 'dreamvilla_mp_entry_meta' ) ) :
  */
 function dreamvilla_mp_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
-		printf( '<span class="sticky-post">%s</span>', esc_html__( 'Featured','dreamvilla-multiple-property') );
+		printf( '<span class="sticky-post">%s</span>', esc_html__( 'Destacado','dreamvilla-multiple-property') );
 	}
 
 	$format = get_post_format();

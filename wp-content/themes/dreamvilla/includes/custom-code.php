@@ -50,7 +50,7 @@ add_action('post_edit_form_tag', 'dreamvilla_mp_update_edit_form');
 
 // Return price type type of property
 function dreamvilla_mp_get_room_type(){
-	return array("Habitación principal" => "Habitación principal", "Habitación" => "Habitación", "Sala de estar" => "Sala de estar", "Comedor" => "Comedor");
+	return array( "MasterBedroom" => "Habitación principal", "Bedroom" => "Habitación", "LivingRoom" => "Sala de estar", "DiningRoom" => "Comedor" );
 }
 
 // Return google near by place
@@ -780,7 +780,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 		
 		$PropertyFetured = get_post_meta( $property_ID, 'pfetured', true);
 		if( $PropertyFetured == "yes" ){
-			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Featured</span> </span>';
+			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Destacado</span> </span>';
 		} else {
 			$featured_proeprty_label_icon = '';
 		}
@@ -874,7 +874,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 		
 		$PropertyFetured = get_post_meta( $property_ID, 'pfetured', true);
 		if( $PropertyFetured == "yes" ){
-			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Featured</span> </span>';
+			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Destacado</span> </span>';
 		} else {
 			$featured_proeprty_label_icon = '';
 		}
@@ -1003,7 +1003,7 @@ function dreamvilla_mp_listing_full_list_version2($property_ID, $property_sideba
 
 		$PropertyFetured = get_post_meta( $property_ID, 'pfetured', true);
 		if( $PropertyFetured == "yes" ){
-			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i><span class="featuredtext">Featured</span></span>';
+			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i><span class="featuredtext">Destacado</span></span>';
 		} else {
 			$featured_proeprty_label_icon = '';
 		}
@@ -1086,7 +1086,7 @@ function dreamvilla_mp_listing_full_list_version2($property_ID, $property_sideba
 
 		$PropertyFetured = get_post_meta( $property_ID, 'pfetured', true);
 		if( $PropertyFetured == "yes" ){
-			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Featured</span> </span>';
+			$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Destacado</span> </span>';
 		} else {
 			$featured_proeprty_label_icon = '';
 		}
@@ -1197,13 +1197,13 @@ function dreamvilla_mp_listing_full_grid_version1($property_ID, $property_sideba
 
 	$PropertyFetured = get_post_meta( $property_ID, 'pfetured', true);
 	if( $PropertyFetured == "yes" ){
-		$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><span class="featuredtext">Featured</span><i class="fa fa-star"></i></span>';
+		$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><span class="featuredtext">Destacado</span><i class="fa fa-star"></i></span>';
 	} else {
 		$featured_proeprty_label_icon = '';
 	}
 
 	$html .=
-		'<div class="image-with-label"><span class="featuredtext">Featured</span> 
+		'<div class="image-with-label"><span class="featuredtext">Destacado</span> 
 			<a href="'.esc_url(get_permalink($property_ID)).'"><img '.$property_image.' alt="recent-properties-1" class="img-responsive"></a>
 			<label>'; 
 				$property_status = get_post_meta( $property_ID, 'pstatus', true );
@@ -1281,7 +1281,7 @@ function dreamvilla_mp_listing_full_grid_version2($property_ID, $property_sideba
 
 	$PropertyFetured = get_post_meta( $property_ID, 'pfetured', true);
 	if( $PropertyFetured == "yes" ){
-		$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Featured</span></span>';
+		$featured_proeprty_label_icon = '<span class="featured-property-icon" href="javascript:void(0)"><i class="fa fa-star"></i> <span class="featuredtext">Destacado</span></span>';
 	} else {
 		$featured_proeprty_label_icon = '';
 	}

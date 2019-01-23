@@ -218,6 +218,7 @@ function dreamvilla_mp_property_detail_fields($post){
 						
 			<li><a href="#tabs-10"><?php esc_html_e('Video & Ads','dreamvilla-multiple-property'); ?></a></li> 
 			<li><a href="#tabs-12"><?php esc_html_e('Otros','dreamvilla-multiple-property'); ?></a></li>
+			
 		</ul>
 		<div class="theme_option_form">
 			
@@ -698,30 +699,30 @@ function dreamvilla_mp_wp_what_people_say( $post_id ) {
 /**
  * 	si en algun momento se quiere volver a poner las demas partes del formulario de crear propiedad
  * 
- * 			<li><a href="#tabs-2"><?php esc_html_e('Comodidades','dreamvilla-multiple-property'); ?></a></li>
- *			<li><a href="#tabs-3"><?php esc_html_e('Interior','dreamvilla-multiple-property'); ?></a></li>
- *			<li><a href="#tabs-4"><?php esc_html_e('Exterior','dreamvilla-multiple-property'); ?></a></li>
- * 			<li><a href="#tabs-7"><?php esc_html_e('Agente','dreamvilla-multiple-property'); ?></a></li>
- *			<li><a href="#tabs-13"><?php esc_html_e('Planta baja','dreamvilla-multiple-property'); ?></a></li>
- *			<li><a href="#tabs-14"><?php esc_html_e('Documentos','dreamvilla-multiple-property'); ?></a></li>
- *			<li><a href="#tabs-15"><?php esc_html_e('Sub Propiedad','dreamvilla-multiple-property'); ?></a></li>
- * 			<li><a href="#tabs-11"><?php esc_html_e('Cerca de ','dreamvilla-multiple-property'); ?></a></li>
+  *			<li><a href="#tabs-2"><?php esc_html_e('Comodidades','dreamvilla-multiple-property'); ?></a></li>
+ 	*		<li><a href="#tabs-3"><?php esc_html_e('Interior','dreamvilla-multiple-property'); ?></a></li>
+ 	*		<li><a href="#tabs-4"><?php esc_html_e('Exterior','dreamvilla-multiple-property'); ?></a></li>
+  	*		<li><a href="#tabs-7"><?php esc_html_e('Agente','dreamvilla-multiple-property'); ?></a></li>
+ 	*		<li><a href="#tabs-13"><?php esc_html_e('Planta baja','dreamvilla-multiple-property'); ?></a></li>
+ 	*		<li><a href="#tabs-14"><?php esc_html_e('Documentos','dreamvilla-multiple-property'); ?></a></li>
+ 	*		<li><a href="#tabs-15"><?php esc_html_e('Sub Propiedad','dreamvilla-multiple-property'); ?></a></li>
+ 	*		<li><a href="#tabs-11"><?php esc_html_e('Cerca de ','dreamvilla-multiple-property'); ?></a></li>
  *
- * 			<?php require_once get_template_directory() . '/inc/backend/property-backend/amenities.php'; ?>
+ *			<?php require_once get_template_directory() . '/inc/backend/property-backend/amenities.php'; ?>
 
 *			<?php require_once get_template_directory() . '/inc/backend/property-backend/interior.php'; ?>
 
 *			<?php require_once get_template_directory() . '/inc/backend/property-backend/exterior.php'; ?>
- * 
+  
  * 			<?php require_once get_template_directory() . '/inc/backend/property-backend/agent.php'; ?>
 
- * 			<?php require_once get_template_directory() . '/inc/backend/property-backend/near-by-place.php'; ?>
+  *			<?php require_once get_template_directory() . '/inc/backend/property-backend/near-by-place.php'; ?>
 
- * <?php require_once get_template_directory() . '/inc/backend/property-backend/foor-plan.php'; ?>
+  *         <?php require_once get_template_directory() . '/inc/backend/property-backend/foor-plan.php'; ?>
 
-	*		<?php require_once get_template_directory() . '/inc/backend/property-backend/documents.php'; ?>
+*			<?php require_once get_template_directory() . '/inc/backend/property-backend/documents.php'; ?>
 
-	*		<?php require_once get_template_directory() . '/inc/backend/property-backend/sub-property.php'; ?>
+*			<?php require_once get_template_directory() . '/inc/backend/property-backend/sub-property.php'; ?>
  * 
  * 
  */

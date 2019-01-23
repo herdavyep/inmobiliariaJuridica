@@ -100,7 +100,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                 switch($key) {         
                                     case 'keyword': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
-											<input type="text" name="keyword" id="keyword" value="<?php echo esc_attr($keyword); ?>" placeholder="<?php esc_html_e("Keyword","dreamvilla-multiple-property"); ?>">
+											<input type="text" name="keyword" id="keyword" value="<?php echo esc_attr($keyword); ?>" placeholder="<?php esc_html_e("Palabra clave","dreamvilla-multiple-property"); ?>">
 										</div><?php
 										$status_keyword = false;									
                                     break;
@@ -108,7 +108,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                     case 'category': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 											<select name="type" id="type" class="selectpicker" data-width="100%">
-												<option value=""><?php esc_html_e('All Type','dreamvilla-multiple-property'); ?></option>
+												<option value=""><?php esc_html_e('Tipo de inmueble','dreamvilla-multiple-property'); ?></option>
 												<?php $property_categories = get_terms("property_category", array("orderby" => "slug", "parent" => 0, 'hide_empty' => 0) );
 												if ( ! empty( $property_categories ) && ! is_wp_error( $property_categories ) ){
 													foreach ( $property_categories as $term ) { ?>
@@ -124,7 +124,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                     case 'status': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 										    <select name="status" id="status" class="selectpicker" data-width="100%">
-												<option value="" selected><?php esc_html_e('All Status','dreamvilla-multiple-property'); ?></option>
+												<option value="" selected><?php esc_html_e('Estados','dreamvilla-multiple-property'); ?></option>
 												<option value="sale" <?php if( isset($_POST['status']) && $_POST['status'] == "sale" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Venta','dreamvilla-multiple-property'); ?></option>
 												<option value="rent" <?php if( isset($_POST['status']) && $_POST['status'] == "rent" ){ echo "selected=selected"; } ?> ><?php esc_html_e('Alquiler','dreamvilla-multiple-property'); ?></option>
 											</select>
@@ -135,7 +135,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                     case 'location': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 											<select name="location" id="location" class="selectpicker" data-width="100%">
-												<option value=""><?php esc_html_e('All Location','dreamvilla-multiple-property'); ?></option>
+												<option value=""><?php esc_html_e('Todas las ubicaciones','dreamvilla-multiple-property'); ?></option>
 												<?php $property_categories = get_terms("location", array("orderby" => "slug", "parent" => 0, 'hide_empty' => 0) );
 												if ( ! empty( $property_categories ) && ! is_wp_error( $property_categories ) ){
 													foreach ( $property_categories as $term ) { ?>
@@ -151,7 +151,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                     case 'bedrooms': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 											<select name="bedroom" id="bedroom" class="selectpicker" data-width="100%">
-												<option value=""><?php esc_html_e('All Bedrooms','dreamvilla-multiple-property'); ?></option>
+												<option value=""><?php esc_html_e('Número de habitaciones','dreamvilla-multiple-property'); ?></option>
 												<?php for ($i=1; $i <=10; $i++) { ?>
 													<option value="<?php echo esc_attr($i); ?>" <?php if( isset($_POST['bedroom']) && $_POST['bedroom'] == $i ){ echo "selected=selected"; } ?> ><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$i); ?></option>
 												<?php } ?>
@@ -163,7 +163,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                     case 'bathrooms': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 											<select name="bathroom" id="bathroom" class="selectpicker" data-width="100%">
-												<option value=""><?php esc_html_e('All Bathrooms','dreamvilla-multiple-property'); ?></option>
+												<option value=""><?php esc_html_e('Número de baños','dreamvilla-multiple-property'); ?></option>
 												<?php for ($i=1; $i <=10; $i++) { ?>
 													<option value="<?php echo esc_attr($i); ?>" <?php if( isset($_POST['bathroom']) && $_POST['bathroom'] == $i ){ echo "selected=selected"; } ?> ><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$i); ?></option>
 												<?php } ?>
@@ -175,7 +175,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
                                     case 'garages': ?>
                                         <div class="col-xs-12 col-sm-6 col-md-3">
 											<select name="garage" id="garage" class="selectpicker" data-width="100%">
-												<option value=""><?php esc_html_e('All Garages','dreamvilla-multiple-property'); ?></option>
+												<option value=""><?php esc_html_e('Número de garajes','dreamvilla-multiple-property'); ?></option>
 												<?php for ($i=1; $i <=10; $i++) { ?>
 													<option value="<?php echo esc_attr($i); ?>" <?php if( isset($_POST['garage']) && $_POST['garage'] == $i ){ echo "selected=selected"; } ?> ><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$i); ?></option>
 												<?php } ?>
@@ -210,7 +210,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 				    					</div>
 				    					<div class="col-xs-6 col-sm-4 col-md-2">
 				    						<span class="more-filter" id="more-filter">
-				    							<?php esc_html_e('More Filters','dreamvilla-multiple-property'); ?> <i class="glyphicon glyphicon-triangle-bottom"> </i>
+				    							<?php esc_html_e('Más filtros','dreamvilla-multiple-property'); ?> <i class="glyphicon glyphicon-triangle-bottom"> </i>
 				    						</span>
 				    					</div><?php
 				    					if( is_user_logged_in() ) { ?>
@@ -312,7 +312,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 			<div class="row property-list-area">
 				<?php
 				if( $property_query->found_posts <= 0 ) { ?>
-					<p class='no-property'><?php esc_html_e('No Property Found.','dreamvilla-multiple-property'); ?></p>
+					<p class='no-property'><?php esc_html_e('No se encontraron propiedades.','dreamvilla-multiple-property'); ?></p>
 				<?php }
 
 				$dreamvilla_property_list = $dreamvilla_options['dreamvilla_search_page_list_variation'];
@@ -348,7 +348,7 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 				$load_more = "style=display:none;";
 			?>
 			<div class="row load_more text-center" data-target="1">
-				<button class="load_more_btn" <?php echo esc_attr($load_more); ?> ><?php esc_html_e('Load more','dreamvilla-multiple-property'); ?></button>
+				<button class="load_more_btn" <?php echo esc_attr($load_more); ?> ><?php esc_html_e('Cargar más','dreamvilla-multiple-property'); ?></button>
 			</div>			
 		</div>
 	</div>

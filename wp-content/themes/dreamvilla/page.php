@@ -25,7 +25,7 @@ $have_sidebar						= $sidebar_pos ? true : false;
 wp_enqueue_style('dreamvilla-mp-main-style', get_template_directory_uri().'/css/dreamvilla-mp-main.css', '', '', 'all');
 global $post;
 
-if(function_exists('dreamvilla_mp_the_breadcrumbs') && $title_bar_meta == 1 ) dreamvilla_mp_the_breadcrumbs(); ?>
+//if(function_exists('dreamvilla_mp_the_breadcrumbs') && $title_bar_meta == 1 ) dreamvilla_mp_the_breadcrumbs(); ?>
 
 <section class="">
 	<div id="main-content" class="container sliderdirection">
