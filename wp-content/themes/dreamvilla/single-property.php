@@ -1,13 +1,13 @@
 <?php
 
 	get_header();
-	
+
 	global $post;
 	$article_classes;
 	wp_enqueue_style('dreamvilla-mp-main-style', get_template_directory_uri().'/css/dreamvilla-mp-main.css', '', '', 'all');
 
 	$dreamvilla_options = get_option('dreamvilla_options');
-	
+
 if ( have_posts() ):
 	while ( have_posts() ):
     	the_post(); ?>
@@ -73,7 +73,7 @@ if ( have_posts() ):
 					</div>
 					<div class="row">
 						<div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-							<?php if(get_post_meta( $post->ID, 'pcountry', true ) != "" || get_post_meta( $post->ID, 'pstate', true )) { ?>
+							<?php if(get_post_meta( $post->ID, 'pcountry', true ) != "" || get_post_meta( $post->ID, 'pstate', true ) || get_post_meta( $post->ID, 'pcity', true )) { ?>
 								<p class="property-detail-address"><i class="fa fa-map-marker"> </i>
 									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pcountry', true )); ?> /
 									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pstate', true )); ?> /
