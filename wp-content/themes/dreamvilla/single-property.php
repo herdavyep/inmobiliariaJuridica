@@ -76,7 +76,7 @@ if ( have_posts() ):
 							<?php if(get_post_meta( $post->ID, 'pcountry', true ) != "" || get_post_meta( $post->ID, 'pstate', true )) { ?>
 								<p class="property-detail-address"><i class="fa fa-map-marker"> </i>
 									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pcountry', true )); ?> /
-									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pstate', true )); ?> 
+									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pstate', true )); ?>
 								</p>
 							<?php } ?>
 						<div class="row property-detail-facility">
@@ -214,7 +214,7 @@ if ( have_posts() ):
 							<?php } ?>
 						</div>
 						<div class="col-lg-6 col-md-6">
-							<?php 
+							<?php
 							$RoomDetails 			= get_post_meta( $post->ID, 'propertyroom', true );
 							$KitchenDetails 		= get_post_meta( $post->ID, 'propertykitchen', true );
 							$BathroomDetails 		= get_post_meta( $post->ID, 'propertybathroom', true );
@@ -937,7 +937,9 @@ if ( have_posts() ):
 					<?php if(!empty($dreamvilla_options['displaypropertyvideo']) && $dreamvilla_options["displaypropertyvideo"] == "yes") { ?>
 					<div class="property-video-sidebar">
 						<h4 class="similar-properties"><?php printf(esc_html__('%s','dreamvilla-multiple-property'), $dreamvilla_options["propertyvideotitle"]);?></h4>
-						<a href="#" data-toggle="modal" data-target="#property-video-model"><img class="img-responsive" alt="about video" src="<?php echo esc_url(get_post_meta($post->ID,"pvideoplaceholder",true)); ?>"></a>
+						<iframe width="420" height="315"
+							src="<?php echo esc_url(get_post_meta($post->ID,"pvideoplaceholder",true)); ?>">
+						</iframe>
 					</div>
 					<?php } ?>
 
