@@ -73,11 +73,10 @@ if ( have_posts() ):
 					</div>
 					<div class="row">
 						<div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-							<?php if(get_post_meta( $post->ID, 'pcountry', true ) != "" || get_post_meta( $post->ID, 'pstate', true ) || get_post_meta( $post->ID, 'pcity', true )) { ?>
+							<?php if(get_post_meta( $post->ID, 'pcountry', true ) != "" || get_post_meta( $post->ID, 'pstate', true )) { ?>
 								<p class="property-detail-address"><i class="fa fa-map-marker"> </i>
 									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pcountry', true )); ?> /
-									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pstate', true )); ?> /
-									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pcity', true )); ?>
+									<?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pstate', true )); ?> 
 								</p>
 							<?php } ?>
 						<div class="row property-detail-facility">
@@ -214,13 +213,8 @@ if ( have_posts() ):
 								</div>
 							<?php } ?>
 						</div>
-<<<<<<< HEAD
-						<div class="col-lg-12 col-md-12">
-							<?php 
-=======
 						<div class="col-lg-6 col-md-6">
-							<?php
->>>>>>> 121f03e6103beb4bfa3bf30f4b2722fe8963909a
+							<?php 
 							$RoomDetails 			= get_post_meta( $post->ID, 'propertyroom', true );
 							$KitchenDetails 		= get_post_meta( $post->ID, 'propertykitchen', true );
 							$BathroomDetails 		= get_post_meta( $post->ID, 'propertybathroom', true );
@@ -910,14 +904,14 @@ if ( have_posts() ):
 							<h5><?php printf(esc_html__('%s','dreamvilla-multiple-property'), $dreamvilla_options["contactformtitledetail"]);?></h5>
 							<div class="inner-page-shortcodes" id="propety-agent-contact-area" style="margin:0;"><div class="message_area_bottom"></div></div>
 							<form id="single-propety-agnet-send-message" name="contact_form" method="POST" >
-								<input type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Full Name","dreamvilla-multiple-property"); ?>" required />
-								<input type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Phone Number","dreamvilla-multiple-property"); ?>" required />
-								<input type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Email Address","dreamvilla-multiple-property"); ?>" required />
-								<textarea placeholder="<?php esc_html_e("Message","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
+								<input type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Nombre completo","dreamvilla-multiple-property"); ?>" required />
+								<input type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Numero de telefono","dreamvilla-multiple-property"); ?>" required />
+								<input type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Correo electronico","dreamvilla-multiple-property"); ?>" required />
+								<textarea placeholder="<?php esc_html_e("Mensaje","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
 								<?php printf( esc_html__('%s','dreamvilla-multiple-property'),$google_recaptcha); ?>
 								<?php $User_Detail = get_userdata( $Property_Agent ); ?>
 								<input type="hidden" name="agent_email_address" class="agent_email_address" value="<?php echo esc_attr($User_Detail->user_email); ?>" >
-								<input type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitrequesttitle']) ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitrequesttitle'] ); } else { esc_html_e('Sunmit Request','dreamvilla-multiple-property'); } ?>" />
+								<input type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitrequesttitle']) ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitrequesttitle'] ); } else { esc_html_e('Enviar Ahora','dreamvilla-multiple-property'); } ?>" />
 							</form>
 						</div>
 						<?php } ?>
@@ -1943,14 +1937,14 @@ if ( have_posts() ):
 							<h5><?php printf(esc_html__('%s','dreamvilla-multiple-property'), $dreamvilla_options["contactformtitledetail"]);?></h5>
 							<div class="inner-page-shortcodes" id="propety-agent-contact-area" style="margin:0;"><div class="message_area_bottom"></div></div>
 							<form id="single-propety-agnet-send-message" name="contact_form" method="POST" >
-								<input type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Full Name","dreamvilla-multiple-property"); ?>" required />
-								<input type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Phone Number","dreamvilla-multiple-property"); ?>" required />
-								<input type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Email Address","dreamvilla-multiple-property"); ?>" required />
-								<textarea placeholder="<?php esc_html_e("Message","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
+								<input type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Nombre completo","dreamvilla-multiple-property"); ?>" required />
+								<input type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Numero de telefono","dreamvilla-multiple-property"); ?>" required />
+								<input type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Correo electronico","dreamvilla-multiple-property"); ?>" required />
+								<textarea placeholder="<?php esc_html_e("Mensaje","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
 								<?php printf( esc_html__('%s','dreamvilla-multiple-property'),$google_recaptcha); ?>
 								 <?php $User_Detail = get_userdata( $Property_Agent ); ?>
 								 <input type="hidden" name="agent_email_address" class="agent_email_address" value="<?php echo esc_attr($User_Detail->user_email); ?>" >
-								<input type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitrequesttitle']) ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitrequesttitle'] ); } else { esc_html_e('Sunmit Request','dreamvilla-multiple-property'); } ?>" />
+								<input type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitrequesttitle']) ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitrequesttitle'] ); } else { esc_html_e('Enviar ahora','dreamvilla-multiple-property'); } ?>" />
 							</form>
 						</div>
 						<?php } ?>
