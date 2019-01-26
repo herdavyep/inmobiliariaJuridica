@@ -1,7 +1,7 @@
 <?php
 
 // Footer
-function dreamvilla_footer_shortcode( $atts, $content = null ) {
+function dreamvilla_footer_shortcode( $atts, $content = null ) {	
 
 	extract( shortcode_atts( array(
 		'agent_info_type'	 		=> '1',
@@ -24,7 +24,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 		'footer_target'		        => '',
 		'show_agent_info'		    => 'disable',
 		'agent_heading'		        => '',
-		'agent_photo'		        => '',
+		'agent_photo'		        => '',		
 		'agent_name'		        => '',
 		'agent_certificate'		    => '',
 		'agent_phone'		        => '',
@@ -40,19 +40,19 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 		'show_copyright_text'		=> '',
 		'copyright_text'			=> '',
 	), $atts ) );
-
+	
 	$out = '';
 
 	$footer_bk_image = wp_get_attachment_url($footer_bk_image, "full");
 
 	if( $agent_info_type == 1 ){
-
+		
 		$dreamvilla_options = get_option('dreamvilla_options'); ?>
-		<div>
+		<div>	
 			<div class="multiple-location-detail">
 				<img src="<?php echo esc_url($footer_bk_image); ?>" class="footer_background_image" alt="Footer background image">
 				<?php
-
+				
 				$left_side_show 	= false;
 				$right_side_show 	= false;
 
@@ -72,14 +72,14 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 					$location_detail_class = "col-md-12 col-sm-12 col-xs-12 multiple-time-detail";
 					$left_side_show = true;
 				}
-
+				
 				$left_side_class = '';
 				$right_side_class = '';
 
 				if( $show_contact_form == "enable" ){
 					$right_side_class = "col-md-4 col-sm-5 col-xs-12";
 					$right_side_show = true;
-				}
+				}				
 
 				if( $left_side_show ){
 					$left_side_class = "col-md-8 col-sm-7 col-xs-12 multiple-locations";
@@ -96,16 +96,16 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 					$right_side_class = "";
 					$left_side_class = "col-md-12 col-sm-12 col-xs-12 multiple-locations";
 				}
-
+				
 				$google_map_id = uniqid(); ?>
 
 				<div class="multiple-location-detail-inner">
 					<div class="container">
-						<div class="row">
+						<div class="row">							
 							<div class="<?php echo esc_attr($left_side_class); ?>">
 						  		<h3 class="multiple-location-title"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$location_heading); ?></h3>
 								<?php if( $show_google_map == "enable" ){ ?>
-								<div class="<?php echo esc_attr($map_class); ?>">
+								<div class="<?php echo esc_attr($map_class); ?>">								
 									<div class="multiple-location-map">
 										<div id="googleMap" style="width:'<?php echo $google_width; ?>';height:<?php echo $google_height; ?>;"></div>
 									</div>
@@ -126,12 +126,12 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 												marker.setMap(map);
 											}
 											google.maps.event.addDomListener(window,'load',initialize);
-										});
-							        </script>
+										});       
+							        </script>					        	
 								</div>
 								<?php } ?>
 								<div class="<?php echo esc_attr($location_detail_class); ?>">
-									<?php if( $show_address == "enable" ){ ?>
+									<?php if( $show_address == "enable" ){ ?>										
 										<div class="multiple-address">
 											<p><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_address); ?></p>
 										</div>
@@ -156,13 +156,13 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 									}
 
 									if( $show_button == "enable" ){ ?>
-										<div class="multiple-schedule_visit" style="background-color: #33BD6D !important;">
+										<div class="multiple-schedule_visit">
 											<a href="<?php echo esc_url($footer_url); ?>"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$footer_btn_content); ?></a>
 										</div><?php
 									} ?>
-
+									
 								</div>
-							</div><?php
+							</div><?php							
 
 							if( !empty($dreamvilla_options['show_google_recaptcha'] ) ){
 								$show_google_recaptcha = $dreamvilla_options['show_google_recaptcha'];
@@ -173,17 +173,16 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 							if( !empty($google_recaptcha_site_key) && $show_google_recaptcha == "yes" ){
 								$google_recaptcha = '<div id="location-version1"></div>';
 							} else {
-								$google_recaptcha = '';
+								$google_recaptcha = '';							
 							}
 
 							if( $show_contact_form == "enable" ){ ?>
 							<div class="<?php echo esc_attr($right_side_class); ?>" id="multiple-contact-part">
 								<div class="multiple-contact-agent">
 									<div class="multiple-agent-form">
-										<h3 class="multiple-location-title form-title"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$contact_form_heading); ?></h3>
+										<h3 class="multiple-location-title form-title"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$contact_form_heading); ?></h3>										
 										<div class="inner-page-shortcodes" id="agent-contact-area" style="margin:0;"><div class="message_area_bottom"></div></div>
 										<form id="agnet-send-message" name="contact_form" method="post" >
-<<<<<<< HEAD
 											<input type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Nombre completo","dreamvilla-multiple-property"); ?>" required />
 											<input type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Numero de telefono","dreamvilla-multiple-property"); ?>" required />
 											<input type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Correo electronico","dreamvilla-multiple-property"); ?>" required />
@@ -192,26 +191,16 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 											<?php $Property_Agent_Email_ID = $dreamvilla_email; ?>
 											<input type="hidden" name="agent_email_address" class="agent_email_address" value="<?php echo esc_attr($Property_Agent_Email_ID); ?>" >
 											<input type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitnowbuttontitle']) !="" ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitnowbuttontitle'] ); } else { esc_html_e('ENVIAR AHORA','dreamvilla-multiple-property'); } ?>" />
-=======
-											<input style="color: #7e8c99 !important;" type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Full Name","dreamvilla-multiple-property"); ?>" required />
-											<input style="color: #7e8c99 !important;" type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Phone Number","dreamvilla-multiple-property"); ?>" required />
-											<input style="color: #7e8c99 !important;" type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Email Address","dreamvilla-multiple-property"); ?>" required />
-											<textarea placeholder="<?php esc_html_e("Message","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
-											<?php printf( esc_html__('%s','dreamvilla-multiple-property'),$google_recaptcha); ?>
-											<?php $Property_Agent_Email_ID = $dreamvilla_email; ?>
-											<input style="color: #7e8c99 !important;" type="hidden" name="agent_email_address" class="agent_email_address" value="<?php echo esc_attr($Property_Agent_Email_ID); ?>" >
-											<input style="color: #7e8c99 !important;" type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitnowbuttontitle']) !="" ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitnowbuttontitle'] ); } else { esc_html_e('SUBMIT NOW','dreamvilla-multiple-property'); } ?>" />
->>>>>>> 981e08235b95abc83c5f66542f097f24ce1d70b8
 										</form>
 									</div>
 								</div>
 							</div>
-							<?php } ?>
+							<?php } ?>							
 						</div>
 					</div>
 				</div><?php
 
-				if( $show_copyright_text == "enable" ){ ?>
+				if( $show_copyright_text == "enable" ){ ?>					
 					<div class="container">
 						<div class="row multiple-copyright-area">
 							<div class="col-sm-12">
@@ -221,27 +210,27 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 							</div>
 						</div>
 					</div><?php
-				} ?>
+				} ?>				
 			</div>
 		</div>
-		<?php
-		$dreamvilla_options = get_option('dreamvilla_options');
+		<?php 
+		$dreamvilla_options = get_option('dreamvilla_options'); 
 		$show_google_recaptcha = $dreamvilla_options['show_google_recaptcha'];
 		$google_recaptcha_site_key = $dreamvilla_options['google_recaptcha_site_key'];
 		?>
 		<script type="text/javascript">
 		jQuery("#agnet-send-message").submit(function(event){
-
+		 		
 			event.preventDefault();
 
 			var show_google_recaptcha = "<?php echo esc_js($show_google_recaptcha); ?>";
 			var google_recaptcha_site_key = "<?php echo esc_js($google_recaptcha_site_key); ?>";
-
+			
 			if( show_google_recaptcha == "yes" && google_recaptcha_site_key != "" && grecaptcha.getResponse(location_v1_recaptcha_id) == "" ) {
 			    alert("Please fill recaptcha!");
 			} else {
 			    var ajaxurl = "<?php echo esc_js(admin_url('admin-ajax.php')); ?>";
-
+				
 				var full_name 			= jQuery('.full_name').val();
 			 	var p_number 			= jQuery('.p_number').val();
 				var email_address		= jQuery('.email_address').val();
@@ -265,8 +254,8 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 			        	jQuery("#agent-contact-area .message_area_bottom").append("<div class='alert alert-success' role='alert'><i class='glyphicon glyphicon-ok'></i> <?php printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['sendinquirysuccessmessage']); ?> </div>");
 			        } else {
 			        	jQuery("#agent-contact-area .message_area_bottom").append("<div class='alert alert-danger' role='alert'><i class='glyphicon glyphicon-remove'></i> <?php printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['sendinquiryfailedmessage']); ?> </div>");
-			        }
-			    });
+			        }	        
+			    });		
 			}
 		});
 		</script><?php
@@ -294,11 +283,11 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 									$contact_form_class = "12";
 								}
 							} ?>
-
+							
 							<?php if( $show_google_map == "enable"){ ?>
 							<div class="<?php echo $google_map_class; ?>">
 								<div class="multiple-location-map">
-										<div id="googleMap" style="width:'<?php echo $google_width; ?>';height:<?php echo $google_height; ?>;"></div>
+										<div id="googleMap" style="width:'<?php echo $google_width; ?>';height:<?php echo $google_height; ?>;"></div>									
 									</div>
 								<script type="text/javascript">
 									jQuery(document).ready(function(){
@@ -320,10 +309,10 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 									});
 								</script>
 							</div>
-							<?php }
+							<?php } 
 
 							if( $show_contact_form == "enable"){ ?>
-
+							
 							<div class="<?php echo $contact_form_class; ?>">
 								<?php
 								if( !empty($dreamvilla_options['show_google_recaptcha'] ) ){
@@ -360,7 +349,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 										</div>
 										<div class="col-xs-12 col-sm-12 col-md-12">
 											<input type="submit" name="sendmessage" class="multiple-send-message" value="<?php if( !empty($dreamvilla_options['submitnowbuttontitle']) ){  printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['submitnowbuttontitle'] ); } else { esc_html_e('SUBMIT NOW','dreamvilla-multiple-property'); } ?>" />
-										</div>
+										</div>							
 									</div>
 								</form>
 							</div>
@@ -368,25 +357,25 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 						</div>
 					</div>
 				</div>
-			</div><?php
+			</div><?php 
 		}
 
 		$show_first_part = false;
 		$first_part_class = "";
 		if( $show_address == "enable" || $show_phone == "enable" || $show_email == "enable" ){
-			$show_first_part = true;
+			$show_first_part = true;							
 		}
 
 		$show_second_part = false;
 		$second_part_class = "";
 		if( $show_opening_hours == "enable" || $show_button == "enable" ){
-			$show_second_part = true;
+			$show_second_part = true;							
 		}
 
 		$show_third_part = false;
 		$third_part_class = "";
 		if( $show_agent_info == "enable" ){
-			$show_third_part = true;
+			$show_third_part = true;							
 		}
 
 		if( $show_first_part && $show_second_part && $show_third_part ){
@@ -417,7 +406,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 			$first_part_class = "";
 			$second_part_class = "";
 			$third_part_class = "col-xs-12 col-sm-12 col-md-12 multiple-agent-detail";
-		}
+		} 
 
 		if( $show_first_part || $show_second_part || $show_third_part ){ ?>
 			<div>
@@ -425,10 +414,10 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 					<div class="container">
 						<div class="<?php echo $first_part_class; ?>">
 							<?php if( $show_address == "enable" ){ ?>
-								<div class="multiple-address">
+								<div class="multiple-address">									
 							        <p><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_address); ?></p>
 								</div>
-							<?php }
+							<?php } 
 							if( $show_phone == "enable" || $show_email == "enable" ){ ?>
 								<div class="multiple-contact-detail">
 									<?php if( $show_phone == "enable" ){?>
@@ -441,19 +430,19 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 						</div>
 
 						<?php if( $show_opening_hours == "enable" || $show_button == "enable" ){ ?>
-							<div class="<?php echo $second_part_class; ?>"><?php
+							<div class="<?php echo $second_part_class; ?>"><?php 
 								if( $show_opening_hours == "enable" ){ ?>
 									<h6><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$opening_hours_label); ?></h6>
 									<p><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$opening_hours); ?></p><?php
-								}
+								} 
 
 								if( $show_button == "enable" ){ ?>
-									<div class="multiple-schedule_visit" style="background-color: #33BD6D !important;">
+									<div class="multiple-schedule_visit">
 										<a href="<?php echo esc_url($footer_url); ?>" target="<?php echo esc_attr($footer_target); ?>"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$footer_btn_content); ?></a>
 									</div>
 								<?php } ?>
 							</div>
-						<?php }
+						<?php } 
 
 						if( $show_agent_info == "enable" ){ ?>
 							<div class="<?php echo $third_part_class; ?>">
@@ -475,7 +464,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 											}
 										}
 
-										if( !empty($agent_photo) ){
+										if( !empty($agent_photo) ){ 
 											$agent_photo = wp_get_attachment_url($agent_photo, "full"); ?>
 											<div class="<?php echo esc_attr($agent_photo_class); ?>">
 												<img src="<?php echo esc_url($agent_photo); ?>" class="img-responsive" alt="agent-photo">
@@ -489,7 +478,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 												<?php if( !empty($agent_phone) ){ ?><span class="agent-contact-information"><i class="fa fa-phone"></i> <?php printf( esc_html__('%s','dreamvilla-multiple-property'), $agent_phone); ?></span><?php } ?>
 												<?php if( !empty($agent_email) ){ ?><span class="agent-contact-information"><i class="fa fa-envelope"></i><a href="mailto:<?php echo antispambot(sanitize_email($agent_email),1); ?>" ><?php printf( esc_html__('%s','dreamvilla-multiple-property'), $agent_email); ?></a></span><?php } ?>
 											</div><?php
-										} ?>
+										} ?>										
 									</div>
 								</div>
 							</div>
@@ -502,21 +491,21 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 		$dreamvilla_options 		= get_option('dreamvilla_options');
 		$show_google_recaptcha 		= $dreamvilla_options['show_google_recaptcha'];
 		$google_recaptcha_site_key 	= $dreamvilla_options['google_recaptcha_site_key'];
-
+		
 		?>
 		<script type="text/javascript">
 		jQuery("#location-v1-agnet-send-message").submit(function(event){
-
+		 		
 			event.preventDefault();
 
 			var show_google_recaptcha = "<?php echo esc_js($show_google_recaptcha); ?>";
 			var google_recaptcha_site_key = "<?php echo esc_js($google_recaptcha_site_key); ?>";
-
+			
 			if( show_google_recaptcha == "yes" && google_recaptcha_site_key != "" && grecaptcha.getResponse(location_v1_recaptcha_id) == "" ) {
 			    alert("Please fill recaptcha!");
 			} else {
 			    var ajaxurl = "<?php echo esc_js(admin_url('admin-ajax.php')); ?>";
-
+				
 				var full_name 			= jQuery('.full_name').val();
 			 	var p_number 			= jQuery('.p_number').val();
 				var email_address		= jQuery('.email_address').val();
@@ -540,11 +529,11 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 			        	jQuery("#agent-contact-area .message_area_bottom").append("<div class='alert alert-success' role='alert'><i class='glyphicon glyphicon-ok'></i> <?php printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['sendinquirysuccessmessage']); ?> </div>");
 			        } else {
 			        	jQuery("#agent-contact-area .message_area_bottom").append("<div class='alert alert-danger' role='alert'><i class='glyphicon glyphicon-remove'></i> <?php printf( esc_html__('%s','dreamvilla-multiple-property'),$dreamvilla_options['sendinquiryfailedmessage']); ?> </div>");
-			        }
-			    });
+			        }	        
+			    });		
 			}
 		});
-		</script><?php
+		</script><?php				
 	}
 	return $out;
 }
