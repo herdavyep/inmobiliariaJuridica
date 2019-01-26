@@ -15,25 +15,19 @@
 		</div>
 		
 		<div class="col-sm-4">
-			<label for="pcountry"><?php esc_html_e("País","dreamvilla-multiple-property"); ?>:</label>
+			<label for="pcountry"><?php esc_html_e("Departamento","dreamvilla-multiple-property"); ?>:</label>
 		</div>
 		<div class="col-sm-8">
 			<input type="text" name="pcountry" id="pcountry" value="<?php echo esc_attr($Property_Country); ?>"/>
 		</div>
 		
 		<div class="col-sm-4">
-			<label for="pstate"><?php esc_html_e("Departamento","dreamvilla-multiple-property"); ?>:</label>
+			<label for="pstate"><?php esc_html_e("Ciudad","dreamvilla-multiple-property"); ?>:</label>
 		</div>
 		<div class="col-sm-8">
 			<input type="text" name="pstate" id="pstate" value="<?php echo esc_attr($Property_State); ?>"/>
 		</div>
 		
-		<div class="col-sm-4">
-			<label for="pcity"><?php esc_html_e("Ciudad","dreamvilla-multiple-property"); ?>:</label>
-		</div>
-		<div class="col-sm-8">
-			<input type="text" name="pcity" id="pcity" value="<?php echo esc_attr($Property_City); ?>"/>
-		</div>
 		
 		<div class="col-sm-4">
 			<label for="googleMap"><?php esc_html_e("Mapa","dreamvilla-multiple-property"); ?>:</label>
@@ -57,3 +51,15 @@
 		</div>
 	</div>
 </div>
+
+
+<?php /*
+		se quito pais y se reemplazo por departamento
+
+       <div class="col-sm-4">
+			<label for="pcity"><?php esc_html_e("Ciudad","dreamvilla-multiple-property"); ?>:</label>
+		</div>
+		<div class="col-sm-8">
+			<input type="text" name="pcity" id="pcity" value="<?php echo esc_attr($Property_City); ?>"/>
+		</div>  */
+?>

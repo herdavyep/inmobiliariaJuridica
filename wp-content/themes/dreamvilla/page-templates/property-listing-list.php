@@ -206,14 +206,14 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/ajax_load.gif" alt="ajax_load" class="img-responsive">
 						</div>
 						<div class="row load_more text-center" data-target="all-proeprty">
-							<button class="load_more_btn"><?php esc_html_e('Load more','dreamvilla-multiple-property'); ?></button>
+							<button class="load_more_btn"><?php esc_html_e('Cargar más','dreamvilla-multiple-property'); ?></button>
 						</div>
 						<?php	
 						if( $category ){
 							foreach( $category as $cat ){
 								if( $property_type_counter[$cat->term_id] > $dreamvilla_options['dreamvilla_number_list_page'] ) { ?>
 									<div class="row load_more text-center" data-target="<?php echo esc_attr($cat->term_id); ?>">
-										<button class="load_more_btn"><?php esc_html_e('Load more','dreamvilla-multiple-property'); ?></button>
+										<button class="load_more_btn"><?php esc_html_e('Cargar más','dreamvilla-multiple-property'); ?></button>
 									</div><?php
 								}
 							} 
@@ -239,14 +239,14 @@ if(function_exists('dreamvilla_mp_the_breadcrumbs')) dreamvilla_mp_the_breadcrum
 					<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/ajax_load.gif" alt="ajax_load" class="img-responsive">
 				</div>
 				<div class="row load_more text-center" data-target="all-proeprty">
-					<button class="load_more_btn"><?php esc_html_e('Load more','dreamvilla-multiple-property'); ?></button>
+					<button class="load_more_btn"><?php esc_html_e('Cargar más','dreamvilla-multiple-property'); ?></button>
 				</div>
 				<?php	
 				if( $category ){
 					foreach( $category as $cat ){
 						if( $property_type_counter[$cat->term_id] > $dreamvilla_options['dreamvilla_number_list_page'] ) { ?>
 							<div class="row load_more text-center" data-target="<?php echo esc_attr($cat->term_id); ?>">
-								<button class="load_more_btn"><?php esc_html_e('Load more','dreamvilla-multiple-property'); ?></button>
+								<button class="load_more_btn"><?php esc_html_e('Cargar más','dreamvilla-multiple-property'); ?></button>
 							</div><?php
 						}
 					} 

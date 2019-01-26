@@ -506,7 +506,7 @@ class Dreamvilla_MP_FeaturedProperty extends WP_Widget {
 									<ul>
 										<li class="left">
 											<img src="<?php echo get_template_directory_uri(); ?>/images/recent_bath.png" alt="Recent Bath" />
-											<?php esc_html_e('Bathrooms','dreamvilla-multiple-property'); ?>
+											<?php esc_html_e('Baños','dreamvilla-multiple-property'); ?>
 										</li>
 										<li class="right"><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($post->ID)); ?></span></li>
 									</ul><?php 
@@ -515,7 +515,7 @@ class Dreamvilla_MP_FeaturedProperty extends WP_Widget {
 									<ul>
 										<li class="left">
 											<img src="<?php echo get_template_directory_uri(); ?>/images/recent_bed.png" alt="Recent Bed" />
-											<?php printf( esc_html_e('Beds','dreamvilla-multiple-property')); ?>
+											<?php printf( esc_html_e('Habitaciones','dreamvilla-multiple-property')); ?>
 										</li>
 										<li class="right"><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($post->ID)); ?></span></li>
 									</ul><?php 
@@ -524,7 +524,7 @@ class Dreamvilla_MP_FeaturedProperty extends WP_Widget {
 									<ul>
 										<li class="left">
 											<img src="<?php echo get_template_directory_uri(); ?>/images/recent_garage.png" alt="Recent Garage" />
-											<?php printf( esc_html_e('Garages','dreamvilla-multiple-property')); ?>
+											<?php printf( esc_html_e('Garajes','dreamvilla-multiple-property')); ?>
 										</li>
 										<li class="right"><span><?php printf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $post->ID, 'pnoofgarage', true)); ?></span></li>
 									</ul><?php
@@ -828,7 +828,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 					'<ul>
 						<li class="left">
 							<img src="'.get_template_directory_uri().'/images/recent_bath.png" alt="Recent Bath" />
-							'.esc_html__('Bathrooms','dreamvilla-multiple-property').'
+							'.esc_html__('Baños','dreamvilla-multiple-property').'
 					      </li>
 						<li class="right"><span>';
 						$html .= sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($property_ID));
@@ -840,7 +840,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 					'<ul>
 						<li class="left">
 							<img src="'.get_template_directory_uri().'/images/recent_bed.png" alt="Recent Bed" />
-							'.esc_html__('Beds','dreamvilla-multiple-property').'
+							'.esc_html__('Habitaciones','dreamvilla-multiple-property').'
 						</li>
 						<li class="right"><span>';
 						$html .= sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($property_ID));
@@ -852,7 +852,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 					'<ul>
 						<li class="left">
 							<img src="'.get_template_directory_uri().'/images/recent_garage.png" alt="Recent Garage" />
-							'.esc_html__('Garages','dreamvilla-multiple-property').'
+							'.esc_html__('Garajes','dreamvilla-multiple-property').'
 						</li>
 						<li class="right"><span>';
 						$html .= sprintf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $property_ID, 'pnoofgarage', true));
@@ -931,7 +931,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 					'<ul>
 						<li class="left">
 							<img src="'.get_template_directory_uri().'/images/recent_bath.png" alt="Recent Bath" />
-							'.esc_html__('Bathrooms','dreamvilla-multiple-property').'
+							'.esc_html__('Baños','dreamvilla-multiple-property').'
 					      </li>
 						<li class="right"><span>';
 						$html .= sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($property_ID));
@@ -943,7 +943,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 					'<ul>
 						<li class="left">
 							<img src="'.get_template_directory_uri().'/images/recent_bed.png" alt="Recent Bed" />
-							'.esc_html__('Beds','dreamvilla-multiple-property').'
+							'.esc_html__('Habitaciones','dreamvilla-multiple-property').'
 						</li>
 						<li class="right"><span>';
 						$html .= sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($property_ID));
@@ -955,7 +955,7 @@ function dreamvilla_mp_listing_full_list_version1($property_ID, $property_sideba
 					'<ul>
 						<li class="left">
 							<img src="'.get_template_directory_uri().'/images/recent_garage.png" alt="Recent Garage" />
-							'.esc_html__('Garages','dreamvilla-multiple-property').'
+							'.esc_html__('Garajes','dreamvilla-multiple-property').'
 						</li>
 						<li class="right"><span>';
 						$html .= sprintf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $property_ID, 'pnoofgarage', true));
@@ -1132,19 +1132,19 @@ function dreamvilla_mp_listing_full_list_version2($property_ID, $property_sideba
 				<div class="col-xs-12 col-sm-12 col-md-12 property-list-list-facility">
 					<div class="row list-v2">
 						<ul class="col-xs-12 col-sm-3 col-md-3">
-							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_bath.png" alt="Recent Bath" />'.__('Bathrooms','dreamvilla-multiple-property').'</li>
+							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_bath.png" alt="Recent Bath" />'.__('Baños','dreamvilla-multiple-property').'</li>
 							<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bathroom($property_ID)).'</span></li>
 						</ul>
 						<ul class="col-xs-12 col-sm-3 col-md-3">
-							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_bed.png" alt="Recent Bed" />'.__('Beds','dreamvilla-multiple-property').'</li>
+							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_bed.png" alt="Recent Bed" />'.__('Habitaciones','dreamvilla-multiple-property').'</li>
 							<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),dreamvilla_mp_number_of_bedroom($property_ID)).'</span></li>
 						</ul>
 						<ul class="col-xs-12 col-sm-3 col-md-3">
-							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_garage.png" alt="Recent Garage" />'.__('Garages','dreamvilla-multiple-property').'</li>
+							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_garage.png" alt="Recent Garage" />'.__('Garajes','dreamvilla-multiple-property').'</li>
 							<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'),get_post_meta( $property_ID, 'pnoofgarage', true)).'</span></li>
 						</ul>
 						<ul class="col-xs-12 col-sm-3 col-md-3">
-							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_area.png" alt="Recent Area" />'.__('Area','dreamvilla-multiple-property').'</li>
+							<li class="left"><img src="'.get_template_directory_uri().'/images/recent_area.png" alt="Recent Area" />'.__('Área','dreamvilla-multiple-property').'</li>
 							<li class="right"><span>'.sprintf( esc_html__('%s','dreamvilla-multiple-property'), $area_detail[0] ).'</span></li>
 						</ul>
 					</div>

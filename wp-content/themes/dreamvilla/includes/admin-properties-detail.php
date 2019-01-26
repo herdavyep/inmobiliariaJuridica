@@ -212,7 +212,7 @@ function dreamvilla_mp_property_detail_fields($post){
 		<ul style="border:none;">
 			<li><a href="#tabs-1"><?php esc_html_e('Detalles básicos','dreamvilla-multiple-property'); ?></a></li>
 			
-			<li><a href="#tabs-5"><?php esc_html_e('Dimenciones','dreamvilla-multiple-property'); ?></a></li>
+			<li><a href="#tabs-5"><?php esc_html_e('Detalles propiedad','dreamvilla-multiple-property'); ?></a></li>
 			<li><a href="#tabs-6" id="property_address" ><?php esc_html_e('Dirección','dreamvilla-multiple-property'); ?></a></li>
 			<li><a href="#tabs-8"><?php esc_html_e('Galeria','dreamvilla-multiple-property'); ?></a></li>
 						
