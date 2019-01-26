@@ -213,7 +213,7 @@ if ( have_posts() ):
 								</div>
 							<?php } ?>
 						</div>
-						<div class="col-lg-6 col-md-6">
+						<div class="col-lg-12 col-md-12">
 							<?php 
 							$RoomDetails 			= get_post_meta( $post->ID, 'propertyroom', true );
 							$KitchenDetails 		= get_post_meta( $post->ID, 'propertykitchen', true );
