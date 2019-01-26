@@ -1,10 +1,10 @@
 <?php
 if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
-    
+
     function dreamvilla_create_dynamic_style() {
 
         $dreamvilla_dynamic_css = array();
-        $dreamvilla_dynamic_css_min_width_1200px = array();        
+        $dreamvilla_dynamic_css_min_width_1200px = array();
 
         $dreamvilla_option = get_option('dreamvilla_options');
 
@@ -32,7 +32,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'value'     =>  $Fonts1. '!important'
             );
         }
-    
+
         // Change Font 2
         if( $Fonts2 != "Lato" && $dreamvilla_option['dreamvilla_change_font'] == 1 ){
             $dreamvilla_dynamic_css[] = array(
@@ -48,7 +48,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  'h1,h2,h3,h4,h5,h6,a:hover,.menu .navbar-default .navbar-nav > .active > a, .menu .navbar-default .navbar-nav > .active > a:focus, .menu .navbar-default .navbar-nav > .active > a:hover, .menu .nav > li > a:hover,.contact_detial,.property_info_header p .fa.fa-circle,.multiple-get-in-touch-button > a,.multiple-recent-posts .multiple-blog-title,.multiple-recent-posts .multiple-blog-read-more,.multiple-recent-posts .multiple-blog-read-more a,.default-template-inner-page p,.property-detail-info .property-detail-facility .property-detail-facility-icon span,.near-location-info .right,.property-list-list ul li.right span,.blog_info ul li a,ul.single_page,.blog_info .archieves li a,.blog_info .blogimagedescription h3, .blog_info .blogimagedescription h3 a,.blog_info .blogimagedescription .detail, .blog_info .blogimagedescription .detail a,.blog_post_page .detail a,.bolg_post_list,.bolg_post_list li,.reply_date_time,.inner-contact #inner-contact-address p,.inner-contact-agent-area input, .inner-contact-agent-area textarea,.inner-contact-agent-area textarea,.inner-faq-panel-title > a,.inner-page-left-sidebar li, .inner-page-right-sidebar li,.content-area ul.agent-address li,.agnet-contact-form input, .agnet-contact-form textarea,.modal-title,.inner-page-search .page-header h1.page-title, .inner-page-search .entry-header h2.entry-title a, h2.screen-reader-text,.search-filter-form-homepage-variation-2 input,.search-filter-form-homepage-variation-2 .btn-group.bootstrap-select,.search-filter-form input,.search-filter-form .btn-group.bootstrap-select,.search-filter-form input,.dsidx-resp-search-form .dsidx-resp-area label,.dsidx-details #dsidx-actions .dsidx-actions-button,.agent-list-info .top-header h2,.agent-detail-contact-form h2,.agent-recent-properties h2,.multiple-recent-properties .property-category-list,.inner-page-property-details-header-area.property-detail2 h1,.inner-page-property-details-header-area.property-detail2 .property-detail-facility-icon label,.property-detail .property-documents-area ul li a,.agent-recent-properties h6,.menu .sub-menu > li > a:hover,.multiple-recent-posts .fa.fa-long-arrow-right,.inner-page-gallery-two-columns-dimension-btn a, .inner-page-gallery-three-columns-dimension-btn a',
                 'property'  =>  'color',
                 'value'     =>  $FontsColor1. '!important'
-            );            
+            );
         }
 
         // Change Text Color 2
@@ -57,7 +57,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  'p,ol,ol li,ul,ul li,a,.welcome_header,.welcome_header h6,.menu .navbar-default .menu-item-has-children > a::after,.drop_down:after,.phone_number h5,.about-city-estate b,.property-list-with-sidebar .feature_property_list_item .featured-properties-price,.multiple-featured-properties .featured-properties-price,.multiple-recent-properties .recent-properties-address,.multiple-recent-properties .carousel-indicators li,ul.property-type > li a,.multiple-recent-posts span,.multiple-recent-posts .multiple-blog-overview,.inner-page-features-villa .description,.inner-page-features .description,.property-detail p,.information-label,.information-value,.agent-contact-form-sidebar input,.agent-contact-form-sidebar textarea,.property-listing-type-button > li > a,.blog_info .blogimagedescription .discription,.blog_page_information ul,.blog_post_page, .blog_post_page p,.blog_discription_paragraphs,.reply_message,.comment-form input,.comment-form textarea,.comment_form_block input, .comment_form_block textarea,.inner-faq .description,.inner-page-gallery-two-columns .description,.inner-page-gallery-three-columns .description,#inner-page-shortcodes-table-data td,#dsidx-primary-data > tbody > tr > th, #dsidx-secondary-data > tbody > tr > th, .dsidx-supplemental-data.dsidx-fields > tbody > tr > th,#dsidx-primary-data > tbody > tr > td, #dsidx-secondary-data > tbody > tr > td, .dsidx-supplemental-data.dsidx-fields > tbody > tr > td,#dsidx.dsidx-details .dsidx-contact-form table textarea,#dsidx.dsidx-details .dsidx-contact-form table input[type="text"],#dsidx.dsidx-details .dsidx-contact-form table textarea,#dsidx.dsidx-details .dsidx-contact-form table textarea,.agent-list-info .top-header span,.agent-list-info .agent-excerpt,.agent-list-info .agnet-list-contact-info li,.agent-list-info .agnet-list-contact-info li a,.agent-detail-contact-form form input[type="text"],.agent-detail-contact-form form textarea,.agent-recent-properties .recent-properties-address,.agent-recent-properties .carousel-indicators li,ul.property-type > li a,.agent-detail-contact-info ul li, .agent-detail-contact-info .list-item,.agent-detail-contact-info ul li a, .agent-detail-contact-info .list-item a,.inner-page-property-details-header-area.property-detail2 .property-detail-address,.blog_post_page, .blog_post_page p,.menu .sub-menu > li > a,.search-filter-form input,.search-filter-form .bootstrap-select > .dropdown-toggle,.more-filter,#more-filter-options label,.multiple-people-to-say .people-position,.people-say h5 span,.near-location-info span,.get-direction input#GetDirectionsAddress,.inner-page-header-area .property_info_header h5, .inner-page-header-area .property_info_header h5 a,.blog_info.blog-thumbnail input.form-input,.blog_info.blog-thumbnail #searchsubmit,.agent-detail-info span,.btn-default,.multiple-agent-form input, textarea,.multiple-agent-detail .agent-certificate-name,.homepage-varation2-contactform input,.homepage-varation2-contactform .multiple-send-message',
                 'property'  =>  'color',
                 'value'     =>  $FontsColor2. '!important'
-            );            
+            );
         }
 
         // Change Text Color 3
@@ -66,16 +66,16 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  'table th,table th a,table th a:hover,blockquote,blockquote p,.property_info_header .know_more,.menu .sub-menu .menu-item-has-children > a::after,.multiple-get-in-touch-description h3,.multiple-get-in-touch-contact .fa,.multiple-get-in-touch-contact .phone_number_h2,.multiple-people-to-say .people-to-say,.multiple-location-detail h3.multiple-location-title,.multiple-contact-detail span,.multiple-time-detail .multiple-schedule_visit a,.multiple-agent-detail h3,.multiple-agent-detail h4,.multiple-agent-detail .agent-contact-information,.schedule_visit_btn:hover, .schedule_visit_btn_header:hover, .schedule_visit_btn:hover > a, .schedule_visit_btn_header:hover > a, a.schedule_visit_href_btn:hover,.inner-page-header-area .property_info_header h2,.inner_slider_text.inner_slider_text_2 h2,#amenities-content h2,.inner-page-property-details-header-area .property-detail-info h1,.agent-contact-form-sidebar .multiple-send-message,.get-direction button,.entry-footer > .tag-links > a,.tagcloud > a,.tag-links > a:hover,.tagcloud > a:hover,blockquote > p, .inner-page-shortcodes blockquote p,.blog_comment_submit_btn, .comment_form_block .blog_comment_submit_btn, .comment-form .blog_comment_submit_btn,.fresh-approch h3,h3.multiple-location-title-homepage2,.home-page-slider-header > h1,.home-page-slider-header > h2,.home-page-slider-header > h3,.home-page-slider-header > h4,.home-page-slider-header > h5,.home-page-slider-header > h6,.home-page-slider-header span,.home-page-slider-header > p ,.home-page-slider-header > span,.searchfilter-homepage-variation-2 .search-label,.search-filter-form-homepage-variation-2 .submit-filter,.searchfilter .search-label,.search-filter-form .submit-filter,.dsidx-resp-submit,.dsidx-resp-area .submit,#dsidx-contact-form-submit,.widget-title > a,.dsidx-widget-single-listing-detail-description,.jbn-nav-button.jbn-left-button.jb-classifier-layer:before,.jbn-nav-button.jbn-right-button.jb-classifier-layer:before,.jbn-nav-button.jbn-left-button.jb-classifier-layer,.jbn-nav-button.jbn-right-button.jb-classifier-layer,.dsidx-widget-single-listing .dsidx-widget-single-listing-meta .dsidx-widget-single-listing-photo-count,.dsidx-widget-single-listing-price,#dsidx.dsidx-details .dsidx-contact-form table #dsidx-contact-form-submit,.dsidx-resp-search-form .dsidx-resp-area.dsidx-resp-area-submit .submit,.dsidx-resp-search-form .dsidx-resp-area.dsidx-resp-area-submit .dsidx-resp-submit,.agent-social a i,.photo-social-section,.photo-social-section a,.agent-detail-info h2,.agent-detail-info p,.filter-header h3,.multiple-people-to-say .people-name,.multiple-address-area p, .multiple-time-detail p, .multiple-contact-detail a,.multiple-agent-form .multiple-send-message:hover,a.multiple-mail-link,.schedule_visit_btn, .schedule_visit_btn_header, .view_on_map_btn, .schedule_visit_href_btn,.schedule_visit_btn > a, .schedule_visit_btn_header > a,#amenities-content,#amenities-content li,#amenities-content li span,.inner-page-property-details-header-area .property-detail-info label.property_type,.property-detail-info .property-detail-address,.property-detail-info .property-detail-facility .property-detail-price,.property-detail-info .property-detail-facility .property-detail-facility-icon label,.load_more_btn,.property-listing-map-info-window .image-with-label label,.blog_page_information .load_more_btn,.discription_detail,.blog_post_reply_btn,.comment-reply-link,.blog_post_reply_btn:hover,.comment-reply-link:hover,.blog_comment_submit_btn,.inner-contact-agent-area .send-message,.inner-faq-agent-contact h1,.inner-faq-agent-contact h2,.inner-faq-agent-contact p,#inner-faq-agent-info a,#inner-faq-agent-form h1,#inner-faq-agent-form .send-message:hover,.inner-page-gallery-two-columns-dimension-btn a.active, .inner-page-gallery-two-columns-dimension-btn a:hover, .inner-page-gallery-three-columns-dimension-btn a.active, .inner-page-gallery-three-columns-dimension-btn a:hover,.inner-page-gallery-two-columns-dimension-detail .image_description p, .inner-page-gallery-three-columns-dimension-detail .image_description p,.inner-page-banner-paragraph p,#inner-page-shortcodes-table-data thead,.send-message,.dsidx-widget-single-listing,.dsidx-widget-single-listing .dsidx-widget-single-listing-slideshow,.agent-recent-properties label,.property_info_header > label,.multiple-recent-properties label,.property-list-with-sidebar .feature_property_list_item label, .multiple-featured-properties label,.agent-detail-contact-form form .submit-btn,.agent-contact-social.collapsed::before,.agent-contact-social::before,.agent-detail-contact-form form .submit-btn,.carousel-control,.agent-detail-contact-info .contact_agent_icon i,.property_info_header h2,.property_info_header label,.property_info_header h5,.price',
                 'property'  =>  'color',
                 'value'     =>  $FontsColor3. '!important'
-            );            
-        }        
+            );
+        }
 
         // Change Text Color 4
-        if( ($FontsColor4 != "#0e90d9") ){
+        if( ($FontsColor4 != "#435060") ){
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.multiple-agent-form .multiple-send-message,.inner-contact-icon .glyphicon.glyphicon-earphone, .inner-contact-icon .glyphicon.glyphicon-envelope,#inner-faq-agent-form .send-message,.agent-info .glyphicon.glyphicon-earphone, .agent-info .glyphicon.glyphicon-envelope,.property-detail .property-documents-area ul li a i',
                 'property'  =>  'color',
                 'value'     =>  $FontsColor4. '!important'
-            );            
+            );
         }
 
         // Change Color 1
@@ -109,7 +109,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '.agent-contact-detail-sidebar p i',
                 'property'  =>  'color',
                 'value'     =>  $Color1. '!important'
-            );            
+            );
         }
 
         // Change Color 2
@@ -124,7 +124,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '.services-we-offer a,.inner-page-property-details-header-area .property-detail-banner img',
                 'property'  =>  'border-color',
                 'value'     =>  $Color2. '!important'
-            );                    
+            );
         }
 
         // Change Color 3
@@ -145,13 +145,13 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '.agent-profile-image > img,.carousel-indicators li,.inner-page-gallery-three-columns-dimension-detail img,.welcome_header_menu > li,.search-filter-form .filter-footer,.agent-profile-image > img, .carousel-indicators li, .inner-page-gallery-three-columns-dimension-detail img, .welcome_header_menu > li, .search-filter-form .filter-footer,.slider_div,.inner-page-gallery-two-columns-dimension-detail img',
                 'property'  =>  'border-color',
                 'value'     =>  $Color3. '!important'
-            ); 
+            );
 
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.people-message::after',
                 'property'  =>  'border-color',
                 'value'     =>  $Color3.' transparent transparent '.$Color3.' !important'
-            );         
+            );
         }
 
         // Change Color 4
@@ -161,7 +161,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'property'  =>  'background',
                 'value'     =>  $Color4. '!important'
             );
-            
+
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.inner-page-property-details-header-area.property-detail2 .property-detail-facility-icon svg',
                 'property'  =>  'fill',
@@ -172,7 +172,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '#primary-sidebar div.blog_info.blog-thumbnail ul li',
                 'property'  =>  'border-color',
                 'value'     =>  $Color4. '!important'
-            );            
+            );
 
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.multiple-location-detail-inner',
@@ -206,7 +206,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
         }
 
         // Change Color 5
-        
+
         if( ($Color5 != "#eaf0f3") ){
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.welcome_header,.search-filter-form,.multiple-featured-properties,.searchfilter .search-filter-form #amount,h3.section-heading::before,.about-city-estate p.banner,.property-list-with-sidebar .feature_property_list_item .featured-properties-detail ul li span, .multiple-featured-properties .featured-properties-detail ul li span,.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all,.col-xs-12.col-sm-8.col-md-8.agent-info-row,.blog_page_information .blog_info, .inner-faq .blog_info,.inner-page-features,.reply_list .comment-body,.inner-page-gallery-two-columns-dimension-btn a, .inner-page-gallery-three-columns-dimension-btn a,.inner-contact-agent-area,.property-listing.multiple-recent-properties .property-list-area .property-list-list.property-listing-list-full, .property-listing.multiple-recent-properties .property-list-area .property-list-list,.property-listing-type-button > li > a:hover, .property-listing-type-button > li > a.active,.recent-proeprties-sidebar.widget-area.multiple-featured-properties .featured-properties-detail, .recent-proeprties-sidebar.widget-area.multiple-featured-properties .featured-properties-address-div,.agent-profile-sidebar,.agent-contact-form-sidebar input,.agent-contact-form-sidebar textarea',
@@ -218,7 +218,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '.homepage-varaiton2-welcome-header .welcome_header.welcome-header-homepage-variation-2',
                 'property'  =>  'background',
                 'value'     =>  'none !important'
-            );            
+            );
 
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.property-list-with-sidebar .feature_property_list_item .featured-properties-address, .multiple-featured-properties .featured-properties-address,.more-filter,.search-filter-form .filter-footer,.image_description_recent_property,.image_description_recent_property .property-features,.image_description_recent_property .property-features li,.multiple-recent-posts-homepage2 .blog-post-description,.multiple-recent-posts-homepage2 .multiple-blog-read-more,.agent-detail-contact-info ul li, .agent-detail-contact-info .list-item,.agent-detail-contact-form form input[type="text"], .agent-detail-contact-form form textarea,.comment-form input, .comment-form textarea, .comment_form_block input, .comment_form_block textarea,.inner-contact-border,#inner-page-shortcodes-table-data table,#inner-page-shortcodes-table-data tr td, #inner-page-shortcodes-table-data thead tr th,.property-listing-type-button > li,.property-list-area.property-list-with-sidebar .property-list-list-info,.property-list-area.property-list-with-sidebar .property-list-list-facility,.filter-widget-body,.recent-proeprties-sidebar.widget-area h4,.property-list-with-sidebar .featured_property_description,.property-detail h4,.agent-profile-sidebar,.near-location-info span,.get-direction,.agent-contact-sidebar,.agent-contact-detail-sidebar,.agent-contact-form-sidebar input,.agent-contact-form-sidebar textarea',
@@ -240,7 +240,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'property'  =>  'color',
                 'value'     =>  $Color6. '!important'
             );
-            
+
             $dreamvilla_dynamic_css[] = array(
                 'elements'  =>  '.multiple-agent-form input, textarea,.social-left,.social-right,.blog_info .blogimagedescription .discription',
                 'property'  =>  'border-color',
@@ -251,7 +251,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '.search-filter-form-homepage-variation-2',
                 'property'  =>  'box-shadow',
                 'value'     =>  '1px 1px 5px '.$Color6.' !important'
-            );            
+            );
         }
 
         if( ($Color1 != "#31a2e1") ||  ($Color6 != "#0e90d9") ){
@@ -259,7 +259,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'elements'  =>  '.fresh-approch',
                 'property'  =>  'background',
                 'value'     =>  'linear-gradient(to right, '.$Color1.' 0%,'.$Color1.' 50%,'.$Color1.' 50%,'.$Color6.' 50%,'.$Color6.' 100%) !important'
-            );            
+            );
         }
 
         if( ($Color7 != "#3d4a5b") ){
@@ -274,17 +274,17 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
                 'property'  =>  'border-color',
                 'value'     =>  $Color7. '!important'
             );
-            
+
         }
 
         // Start generating if related arrays are populated
         if ( count( $dreamvilla_dynamic_css ) > 0 ) {
             echo "<style type='text/css' id='dreamvilla-dynamic-css'>\n\n";
-            
+
             // Basic dynamic CSS
             if ( count( $dreamvilla_dynamic_css ) > 0 ) {
                 dreamvilla_dynamic_style ( $dreamvilla_dynamic_css );
-            }            
+            }
             echo '</style>';
         }
 
@@ -293,7 +293,7 @@ if ( !function_exists( 'dreamvilla_create_dynamic_style' ) ) {
 add_action( 'wp_head', 'dreamvilla_create_dynamic_style' );
 
 if ( !function_exists( 'dreamvilla_dynamic_style' ) ) {
-    
+
     function dreamvilla_dynamic_style( $dreamvilla_css_array ){
         foreach ( $dreamvilla_css_array as $css_part ) {
             if ( ! empty( $css_part[ 'value' ] ) ) {
