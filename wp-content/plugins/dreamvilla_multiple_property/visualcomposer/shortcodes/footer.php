@@ -156,7 +156,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 									}
 
 									if( $show_button == "enable" ){ ?>
-										<div class="multiple-schedule_visit">
+										<div class="multiple-schedule_visit" style="background-color: #33BD6D !important;">
 											<a href="<?php echo esc_url($footer_url); ?>"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$footer_btn_content); ?></a>
 										</div><?php
 									} ?>
@@ -183,10 +183,10 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 										<h3 class="multiple-location-title form-title"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$contact_form_heading); ?></h3>										
 										<div class="inner-page-shortcodes" id="agent-contact-area" style="margin:0;"><div class="message_area_bottom"></div></div>
 										<form id="agnet-send-message" name="contact_form" method="post" >
-											<input type="text" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Nombre completo","dreamvilla-multiple-property"); ?>" required />
-											<input type="text" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Numero de telefono","dreamvilla-multiple-property"); ?>" required />
-											<input type="email" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Correo electronico","dreamvilla-multiple-property"); ?>" required />
-											<textarea placeholder="<?php esc_html_e("Mensaje","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
+											<input type="text" style="color: #7e8c99 !important;" id="fname" name="full_name" class="full_name" placeholder="<?php esc_html_e("Nombre completo","dreamvilla-multiple-property"); ?>" required />
+											<input type="text" style="color: #7e8c99 !important;" id="pnumber" name="p_number" class="p_number" placeholder="<?php esc_html_e("Numero de telefono","dreamvilla-multiple-property"); ?>" required />
+											<input type="email"style="color: #7e8c99 !important;" id="emailid" name="email_address" class="email_address" placeholder="<?php esc_html_e("Correo electronico","dreamvilla-multiple-property"); ?>" required />
+											<textarea style="color: #7e8c99 !important;" placeholder="<?php esc_html_e("Mensaje","dreamvilla-multiple-property"); ?>" name="message" class="message" required></textarea>
 											<?php printf( esc_html__('%s','dreamvilla-multiple-property'),$google_recaptcha); ?>
 											<?php $Property_Agent_Email_ID = $dreamvilla_email; ?>
 											<input type="hidden" name="agent_email_address" class="agent_email_address" value="<?php echo esc_attr($Property_Agent_Email_ID); ?>" >
@@ -437,7 +437,7 @@ function dreamvilla_footer_shortcode( $atts, $content = null ) {
 								} 
 
 								if( $show_button == "enable" ){ ?>
-									<div class="multiple-schedule_visit">
+									<div class="multiple-schedule_visit" style="background-color: #33BD6D !important;">
 										<a href="<?php echo esc_url($footer_url); ?>" target="<?php echo esc_attr($footer_target); ?>"><?php printf( esc_html__('%s','dreamvilla-multiple-property'),$footer_btn_content); ?></a>
 									</div>
 								<?php } ?>
