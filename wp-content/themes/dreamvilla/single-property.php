@@ -937,7 +937,7 @@ if ( have_posts() ):
 					<?php if(!empty($dreamvilla_options['displaypropertyvideo']) && $dreamvilla_options["displaypropertyvideo"] == "yes") { ?>
 					<div class="property-video-sidebar">
 						<h4 class="similar-properties"><?php printf(esc_html__('%s','dreamvilla-multiple-property'), $dreamvilla_options["propertyvideotitle"]);?></h4>
-						<iframe width="560" height="315" src="<?php echo esc_url(get_post_meta($post->ID,"pvideourl")); ?>"
+						<iframe width="560" height="315" src="<?php echo esc_url(get_post_meta($post->pvideourl)); ?>"
 						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 						</iframe>
 					</div>
